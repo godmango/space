@@ -6,8 +6,15 @@
 		<title>Document</title>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Changa&family=Special+Elite&display=swap"
+
+			rel="stylesheet"
+		/>
+		<!-- BOOTSTRAP -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 			rel="style" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
+
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
@@ -40,17 +47,31 @@
 			<div id="ll-section2">This is section 2</div>
 			<!-- Branded + Giau (about us) -->
 			<!-- Jun Young + Huong (solar system pop up) -->
+
+			<!-- passenger no -->
+			<div class="hg-noOfPassenger">
+				<label class="hg-nasa mr-4 number" for="number">No. of passenger:</label>
+				<select  class="hg-nasa number" name="number" id="number" onchange="getNoOfPassenger()">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+			</div>
+			<br>
+
 			<div class="jydesktop">
 				<div class="jyprow1">
 					<img
 						class="jycrop1 jymercury"
 						src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
 						alt="mercury"
+						class="hg-planets hg-nasa" onClick="reply_click('Mercury')"
 					/>
 					<img
 						class="jycrop1 jyvenus"
 						src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
 						alt="venus"
+						class="hg-planets hg-nasa" onClick="reply_click('Venus')"
 					/>
 				</div>
 				<div class="jyprow2">
@@ -63,6 +84,7 @@
 						class="jycrop1 jymars"
 						src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
 						alt="mars"
+						class="hg-planets hg-nasa" onClick="reply_click('Mars')"
 					/>
 				</div>
 				<div class="jyprow2">
@@ -71,6 +93,7 @@
 							class="jycrop1"
 							src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
 							alt="jupiter"
+							class="hg-planets hg-nasa" onClick="reply_click('Jupiter')"
 						/>
 					</div>
 
@@ -78,6 +101,7 @@
 						class="jycrop2 jysaturn"
 						src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
 						alt="saturn"
+						class="hg-planets hg-nasa" onClick="reply_click('Saturn')"
 					/>
 				</div>
 				<div class="jyprow1">
@@ -85,11 +109,13 @@
 						class="jycrop1 jyuranus"
 						src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
 						alt="uranus"
+						class="hg-planets hg-nasa"  onClick="reply_click('Uranus')"
 					/>
 					<img
 						class="jycrop1 jyneptune"
 						src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
 						alt="neptune"
+						class="hg-planets hg-nasa" onClick="reply_click('Neptune')"
 					/>
 				</div>
 			</div>
@@ -99,42 +125,56 @@
 					class="jycrop1 jymercury"
 					src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
 					alt="mercury"
+					class="hg-planets hg-nasa" onClick="reply_click('Mercury')"
 				/>
 				<img
 					class="jycrop1 jyvenus"
 					src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
 					alt="venus"
+					class="hg-planets hg-nasa" onClick="reply_click('Venus')"
 				/>
 				<img
 					class="jycrop1 jyearth"
 					src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
 					alt="earth"
+					class="hg-planets hg-nasa" onClick="reply_click('Earth')"
 				/>
 				<img
 					class="jycrop1 jymars"
 					src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
 					alt="mars"
+					class="hg-planets hg-nasa" onClick="reply_click('Mars')"
 				/>
 				<img
 					class="jycrop1 jyjupiter"
 					src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
 					alt="jupiter"
+					class="hg-planets hg-nasa" onClick="reply_click('Jupiter')"
 				/>
 				<img
 					class="jycrop2 jysaturn"
 					src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
 					alt="saturn"
+					class="hg-planets hg-nasa" onClick="reply_click('Saturn')"
 				/>
 				<img
 					class="jycrop1 jyuranus"
 					src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
 					alt="uranus"
+					class="hg-planets hg-nasa" onClick="reply_click('Uranus')"
 				/>
 				<img
 					class="jycrop1 jyneptune"
 					src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
 					alt="neptune"
+					class="hg-planets hg-nasa" onClick="reply_click('Neptune')"
 				/>
+			</div>
+			<!-- POPUP -->
+			<div class="row" id="hg-popup" style="display: none;">
+        
+
+        
 			</div>
 		</section>
 		<footer>
@@ -167,8 +207,15 @@
 	
 			<!-- Branden / Giau (footer) -->
 		</footer>
-		<script src="/myscripts.js"></script>
+		
+		<!-- JQUERY -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script src="./myscripts.js"></script>
 	</body>
 </html>
