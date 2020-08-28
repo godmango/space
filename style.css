@@ -51,18 +51,14 @@ body {
 }
 
 .jycrop1 {
-	width: 200px;
-	height: 200px;
-	object-fit: none;
+	width: 130px;
+	height: auto;
+
 	border-radius: 50%;
 }
 
 .jycrop2 {
-	width: 390px;
-	height: 190px;
-	object-fit: cover;
-	border-radius: 50%;
-	object-position: 65% -20px;
+	width: 330px;
 }
 .jyprow1 {
 	display: flex;
