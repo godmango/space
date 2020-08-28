@@ -1,0 +1,5 @@
+Fonts used in this design:
+
+Font: Flux Architect
+Author: Clayton Cowan
+Url: http://www.fontsquirrel.com/fonts/flux
