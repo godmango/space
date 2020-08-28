@@ -1,51 +1,121 @@
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  margin: 0px;
+	margin: 0px;
 }
 
 @keyframes scrollBackground {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0px -1080px;
-  }
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 0px -1080px;
+	}
 }
 
 .ll-welcome {
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("https://i.imgur.com/nbtlerW.jpg");
-  background-size: cover;
-  animation: scrollBackground 60s infinite;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  font-family: "Special Elite", cursive;
-  font-size: 60px;
-  text-align: center;
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url("https://i.imgur.com/nbtlerW.jpg");
+	background-size: cover;
+	animation: scrollBackground 60s infinite;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	font-family: "Special Elite", cursive;
+	font-size: 60px;
+	text-align: center;
 }
 
 .ll-bankspace {
-  height: 40%;
+	height: 40%;
 }
 
 .ll-scroll {
-  text-decoration: none;
-  color: white;
-  transform: rotate(315deg);
+	text-decoration: none;
+	color: white;
+	transform: rotate(315deg);
 }
 
 .ll-rotateRocket:hover {
-  transform: rotate(315deg);
+	transform: rotate(315deg);
 }
 
 #ll-section2 {
-  height: 300px;
+	height: 300px;
+}
+
+.jycrop1 {
+	width: 200px;
+	height: 200px;
+	object-fit: none;
+	border-radius: 50%;
+}
+
+.jycrop2 {
+	width: 390px;
+	height: 190px;
+	object-fit: cover;
+	border-radius: 50%;
+	object-position: 65% -20px;
+}
+.jyprow1 {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.jyprow2 {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+.jydesktop .jymercury,
+.jydesktop .jyuranus {
+	margin-left: 500px;
+}
+
+.jydesktop .jyearth,
+.jydesktop .jyjupiter {
+	margin-left: 300px;
+}
+
+.jydesktop .jyvenus,
+.jydesktop .jyneptune {
+	margin-right: 500px;
+}
+
+.jydesktop .jymars {
+	margin-right: 300px;
+}
+
+.jydesktop .jysaturn {
+	margin-right: 205px;
+}
+
+.jymobile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.jymobile img {
+	margin: 30px;
+}
+
+@media only screen and (max-width: 1485px) {
+	.jydesktop {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 1486px) {
+	.jymobile {
+		display: none;
+	}
 }
