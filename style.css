@@ -77,25 +77,25 @@ body {
 }
 .jydesktop .jymercury,
 .jydesktop .jyuranus {
-	margin-left: 500px;
+	margin-left: 26vw;
 }
 
 .jydesktop .jyearth,
 .jydesktop .jyjupiter {
-	margin-left: 300px;
+	margin-left: 10vw;
 }
 
 .jydesktop .jyvenus,
 .jydesktop .jyneptune {
-	margin-right: 500px;
+	margin-right: 26vw;
 }
 
 .jydesktop .jymars {
-	margin-right: 300px;
+	margin-right: 10vw;
 }
 
 .jydesktop .jysaturn {
-	margin-right: 205px;
+	margin-right: 8vw;
 }
 
 .jymobile {
@@ -108,13 +108,13 @@ body {
 	margin: 30px;
 }
 
-@media only screen and (max-width: 1485px) {
+@media only screen and (max-width: 1424px) {
 	.jydesktop {
 		display: none;
 	}
 }
 
-@media only screen and (min-width: 1486px) {
+@media only screen and (min-width: 1425px) {
 	.jymobile {
 		display: none;
 	}
