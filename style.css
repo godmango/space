@@ -1,5 +1,5 @@
 
-section {
+.bran-card-section {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -7,7 +7,7 @@ section {
     min-height: 800 px;
     max-width: 1170 px;
     padding: 25px;
-    background-image: url(https://wallpaperaccess.com/full/366025.jpg);
+    background-image: url(https://vistapointe.net/images/stars-wallpaper-3.jpg);
 }
 
 span{
@@ -22,8 +22,14 @@ span{
 
 .cards{
   margin-bottom: 25px;
-  min-heigth:600px;
-  min-width:360px;
+  /*min-height:600px;
+  min-width:360px;*/
+}
+
+
+.card-photo {
+    height: 300px;
+    width: 100%;
 }
 
 /*
@@ -33,7 +39,7 @@ span{
 }
 */
 
-.col-md-4 {
+.card-style {
   border-width: 20px;
 }
 
@@ -60,7 +66,7 @@ img {
 }
 */
 
-img:hover {
+.card-img-top:hover {
   opacity: .5;
 }
 
