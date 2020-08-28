@@ -36,49 +36,24 @@ span{
     width: 100%;
 }
 
-/*
-.cards-5 {
-  position:realtive;
-  width:100%;
-}
-*/
+
 
 .card-style {
   border-width: 20px;
 }
 
-/*i need to make the background transparent
-.aboutus-card{
-  background: transparent;
-}*/
+
 
 .box-shadow {
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
 }
-/*
-.card-img-top:hover { 
-  opacity: 1.0;
-}
-*/
 
-/* gonna need a special class*/
-/* hover for about us*/
-/*
-img {
-  min-heigth:300 px;
-  min-width:300 px;
-}
-*/
 
 .card-img-top:hover {
   opacity: .5;
 }
 
-/* inside the card*/
-/*
-.cards {
-  paddingpx;
-}
+
 
 html {
 	scroll-behavior: smooth;
