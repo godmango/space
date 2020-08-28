@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
 <body>
     <nav>
 <!-- Branden / Giau (navbar) -->
@@ -12,10 +18,25 @@
 
     <section>
 <!-- Ellen (mainpage) -->
+      <div class="ll-welcome">
+        <div>Are you ready <br />for your next adventure?</div>
+        <div class="ll-bankspace"></div>
+        <div class="ll-rotateRocket" id="ll-rocketButton" onclick="flyRocket">
+          <a href="#ll-section2" class="ll-scroll">
+            <ion-icon name="rocket-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+
+      <div id="ll-section2">This is section 2</div>
 <!-- Branded + Giau (about us) -->
 <!-- Jun Young + Huong (solar system pop up) -->
+  </section>
     <footer>
 <!-- Branden / Giau (footer) -->
     </footer>
+  <script src="/myscripts.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>
