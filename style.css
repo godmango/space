@@ -137,7 +137,6 @@ body {
 
 
 #hg-popup {
-    background-color: #00223e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,7 +144,6 @@ body {
 	overflow: hidden;
 	max-width: 100vw;
 	height: 100vh;
-	/* position: relative; */
 	color: #ffffff;
 }
 
@@ -158,23 +156,13 @@ body {
 	position: relative;
 	width: 800px;
 	height: 700px;
-    
-    /* background-image: url("../img/image.jpg"); */
-    /* background-image: url("https://us.123rf.com/450wm/jemastock/jemastock1803/jemastock180302350/96766477-astronaut-helmet-over-black-background-vector-clothing-design.jpg?ver=6"); */
-    /* background-size: cover; */
-    /* background-size: contain;
-    background-repeat: no-repeat; */
-
     display: flex;
     justify-content: center;
 	align-items: center;
-	/* overflow: hidden; */
-
 }
 
 .hg-popup-img {
 	position: absolute;
-	/* margin-bottom: -560px; */
 	overflow: hidden;
 	height: 800px;
 	
