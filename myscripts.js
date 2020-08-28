@@ -52,9 +52,7 @@ const cost_per_1000km = 1000;
 
 // function to get the number of passengers
 function getNoOfPassenger() {
-    // document.getElementById("srt").value = document.getElementById("number").value;
     const numberOfPassenger = document.getElementById("number").value;
-    // document.getElementById("srt").value = numberOfPassenger;
 
     return numberOfPassenger;
 }
@@ -124,4 +122,3 @@ window.smoothScroll = function(target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
-{/* <img src="./img/image.jpg" width="800px"> */}

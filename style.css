@@ -1,3 +1,60 @@
+
+
+
+
+
+.bran-card-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:white;
+    min-height: 800 px;
+    max-width: 1170 px;
+    padding: 25px;
+    background-image: url(https://vistapointe.net/images/stars-wallpaper-3.jpg);
+}
+
+span{
+  color: red;
+  font-weight: 500;
+}
+
+.aboutus-p{
+  font-size: 1.2em;
+  color: white;
+}
+
+.cards{
+  margin-bottom: 25px;
+  /*min-height:600px;
+  min-width:360px;*/
+}
+
+
+.card-photo {
+    height: 300px;
+    width: 100%;
+}
+
+
+
+.card-style {
+  border-width: 20px;
+}
+
+
+
+.box-shadow {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
+}
+
+
+.card-img-top:hover {
+  opacity: .5;
+}
+
+
+
 html {
 	scroll-behavior: smooth;
 }
