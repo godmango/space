@@ -47,5 +47,9 @@ body {
 }
 
 #ll-section2 {
-  height: 300px;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://i.imgur.com/IlusjAQ.jpg");
+  background-size: cover;
+  background-position: center;
 }
