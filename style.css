@@ -21,7 +21,7 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("https://i.imgur.com/nbtlerW.jpg");
   background-size: cover;
-  animation: scrollBackground 60s;
+  animation: scrollBackground 60s infinite;
   color: white;
   display: flex;
   flex-direction: column;
