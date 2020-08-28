@@ -51,18 +51,14 @@ body {
 }
 
 .jycrop1 {
-	width: 200px;
-	height: 200px;
-	object-fit: none;
+	width: 130px;
+	height: auto;
+
 	border-radius: 50%;
 }
 
 .jycrop2 {
-	width: 390px;
-	height: 190px;
-	object-fit: cover;
-	border-radius: 50%;
-	object-position: 65% -20px;
+	width: 330px;
 }
 .jyprow1 {
 	display: flex;
@@ -77,25 +73,25 @@ body {
 }
 .jydesktop .jymercury,
 .jydesktop .jyuranus {
-	margin-left: 500px;
+	margin-left: 26vw;
 }
 
 .jydesktop .jyearth,
 .jydesktop .jyjupiter {
-	margin-left: 300px;
+	margin-left: 10vw;
 }
 
 .jydesktop .jyvenus,
 .jydesktop .jyneptune {
-	margin-right: 500px;
+	margin-right: 26vw;
 }
 
 .jydesktop .jymars {
-	margin-right: 300px;
+	margin-right: 10vw;
 }
 
 .jydesktop .jysaturn {
-	margin-right: 205px;
+	margin-right: 8vw;
 }
 
 .jymobile {
@@ -108,13 +104,13 @@ body {
 	margin: 30px;
 }
 
-@media only screen and (max-width: 1485px) {
+@media only screen and (max-width: 1424px) {
 	.jydesktop {
 		display: none;
 	}
 }
 
-@media only screen and (min-width: 1486px) {
+@media only screen and (min-width: 1425px) {
 	.jymobile {
 		display: none;
 	}
