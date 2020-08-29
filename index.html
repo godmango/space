@@ -6,10 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Changa&family=Special+Elite&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Changa&family=Special+Elite&display=swap">
 
-			rel="stylesheet"
-		/>
 		<!-- BOOTSTRAP -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -123,15 +121,26 @@
 			<!-- Jun Young + Huong (solar system pop up) -->
 
 			<!-- passenger no -->
-			<div class="hg-noOfPassenger">
-				<label class="hg-nasa mr-4 number" for="number">No. of passenger:</label>
-				<select  class="hg-nasa number" name="number" id="number" onchange="getNoOfPassenger()">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-				</select>
+
+			<!-- particles.js container -->
+			<div id="particles-js">
+				<div class="hg-noOfPassenger">
+					<label class="hg-nasa mr-4 number" for="number">No. of passenger:</label>
+					<select  class="hg-nasa number" name="number" id="number" onchange="getNoOfPassenger()">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+				</div>
 			</div>
-			<br>
+
+			<!-- stats - count particles -->
+			<div class="count-particles">
+				<span class="js-count-particles"></span>
+			</div>
+
+
+			
 
 			<div class="jydesktop">
 				<div class="jyprow1">
@@ -153,6 +162,7 @@
 						class="jycrop1 jyearth"
 						src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
 						alt="earth"
+						class="hg-planets hg-nasa" onClick="reply_click('Earth')"
 					/>
 					<img
 						class="jycrop1 jymars"
@@ -290,6 +300,11 @@
 		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+		<!-- PARTICLES JS -->
+		<script src="./particles.js"></script>
+		<script src="./app.js"></script>
+
+		<!-- MAIN JS -->
 		<script src="./myscripts.js"></script>
 	</body>
 </html>

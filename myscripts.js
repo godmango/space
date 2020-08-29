@@ -8,7 +8,6 @@
 //   document.getElementById("ll-rocketButton").style.animation = "fly-rocket 10s";
 // }
 
-
 const arrayData = [
     {
         key: 'Mars',
@@ -53,9 +52,7 @@ const cost_per_1000km = 1000;
 
 // function to get the number of passengers
 function getNoOfPassenger() {
-    // document.getElementById("srt").value = document.getElementById("number").value;
     const numberOfPassenger = document.getElementById("number").value;
-    // document.getElementById("srt").value = numberOfPassenger;
 
     return numberOfPassenger;
 }
@@ -66,6 +63,12 @@ function reply_click(clicked_id)
     
 
     const planetName = clicked_id;
+
+    if(planetName === 'Earth') {
+        alert("You are already on Earth!");
+        return;
+    }
+
     let cost = 0;
 
     const chosenPlanet = arrayData.find(item => item.key === planetName);
@@ -81,10 +84,11 @@ function reply_click(clicked_id)
     `
     <div class="hg-popup-container">
         <div class="hg-popup-img" >
-            <img src="./img/image.jpg" width="800px">
+            
+        <img src="https://i.pinimg.com/originals/56/a4/86/56a4868144d352eb4d7dc29b6fb79df7.gif" >
         </div>
         <div class="col-12 hg-popup-content text-center align-items-center">
-            Distance: ${distanceToChosenPlanet.toLocaleString() + " KM"} <br>
+            Distance: ${distanceToChosenPlanet.toLocaleString() + " KM " + "to " + planetName} <br>
             Total cost: ${cost.toLocaleString() + " USD"} <br>
             Expected travel time: ${chosenPlanet.duration.toLocaleString()}
         </div>
@@ -117,5 +121,4 @@ window.smoothScroll = function(target) {
     // start scrolling
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
-
 
