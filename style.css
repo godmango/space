@@ -1,201 +1,299 @@
-
-
-
-
-
 .bran-card-section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-height: 800 px;
-    max-width: 1170 px;
-    padding: 25px;
-    /*new background image and code*/
-    background-image: url(https://i.imgur.com/IlusjAQ.jpg%22);
-    background-size: cover;
-    background-position: center;
-    padding: 5% 0;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  min-height: 800 px;
+  max-width: 1170 px;
+  padding: 25px;
+  background-image: url(https://vistapointe.net/images/stars-wallpaper-3.jpg);
+
 }
 
-
-
-span{
-  color:  #fc3d21;
-  font-family: 'nasalizationregular';
-  font-weight: 500;
-  font-size: larger;
-}
-
-.aboutus-p{
+.aboutus-p {
   font-size: 1.2em;
   color: white;
 }
 
-.cards{
+.cards {
   margin-bottom: 25px;
   /*min-height:600px;
   min-width:360px;*/
 }
 
-/*should we change the width?*/
+
 .card-photo {
-    height: 300px;
-    width: 100%;
+  height: 300px;
+  width: 100%;
 }
 
 .card-style {
   border-width: 0px;
 }
 
-.card-title{
-    font-family: 'nasalizationregular';
-    font-weight: 400;
-}
 
 .box-shadow {
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
 }
-
 
 .card-img-top:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
-
-
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	margin: 0px;
+  margin: 0px;
 }
 
+@keyframes scrollPrice {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1425px 0px;
+  }
+}
 @keyframes scrollBackground {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: 0px -1080px;
-	}
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0px -1080px;
+  }
 }
 
 .ll-welcome {
-	width: 100%;
-	height: 100vh;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-		url("https://i.imgur.com/nbtlerW.jpg");
-	background-size: cover;
-	animation: scrollBackground 60s infinite;
-	color: white;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-	font-family: "Special Elite", cursive;
-	font-size: 60px;
-	text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/image/intro-background.jpg");
+  background-size: cover;
+  animation: scrollBackground 60s infinite;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Special Elite", cursive;
+  font-size: 60px;
+  text-align: center;
 }
 
 .ll-bankspace {
-	height: 40%;
+  height: 40%;
 }
 
 .ll-scroll {
-	text-decoration: none;
-	color: white;
-	transform: rotate(315deg);
+  text-decoration: none;
+  color: white;
+  transform: rotate(315deg);
 }
 
 .ll-rotateRocket:hover {
-	transform: rotate(315deg);
+  transform: rotate(315deg);
 }
 
-#ll-section2 {
-	height: 300px;
+.ll-footer {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(/image/numberpeople.png);
+  background-position: bottom left;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ll-box div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30%;
+}
+
+.ll-box div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
+
+.ll-box div:nth-child(2) {
+  top: 90%;
+  left: 50%;
+  animation: animate 7s linear infinite;
+}
+
+.ll-box div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: animate 9s linear infinite;
+}
+
+.ll-box div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+
+.ll-box div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+
+.ll-box div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+
+.ll-box div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: animate 15s linear infinite;
+}
+
+.ll-box div:nth-child(8) {
+  position: absolute;
+  top: 32%;
+  left: 25%;
+  animation: animate 16s linear infinite;
+}
+
+.ll-box div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: animate 9s linear infinite;
+}
+
+.ll-box div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+
+.ll-box div:nth-child(11) {
+  top: 50%;
+  left: 1%;
+  animation: animate 5s linear infinite;
+}
+
+.ll-box div:nth-child(12) {
+  top: 80%;
+  left: 90%;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(-90px) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+#hg-noOfPassenger {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./image/planetbackground.jpg");
+  background-size: cover;
+  background-position: top;
+  padding: 5% 0;
 }
 
 .jycrop1 {
-	width: 130px;
-	height: auto;
+  width: 130px;
+  height: auto;
 
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 .jycrop2 {
-	width: 330px;
+  width: 330px;
 }
 .jyprow1 {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .jyprow2 {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 .jydesktop .jymercury,
 .jydesktop .jyuranus {
-	margin-left: 26vw;
+  margin-left: 26vw;
 }
 
 .jydesktop .jyearth,
 .jydesktop .jyjupiter {
-	margin-left: 10vw;
+  margin-left: 10vw;
 }
 
 .jydesktop .jyvenus,
 .jydesktop .jyneptune {
-	margin-right: 26vw;
+  margin-right: 26vw;
 }
 
 .jydesktop .jymars {
-	margin-right: 10vw;
+  margin-right: 10vw;
 }
 
 .jydesktop .jysaturn {
-	margin-right: 8vw;
+  margin-right: 8vw;
 }
 
 .jymobile {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .jymobile img {
-	margin: 30px;
+  margin: 30px;
 }
 
 @media only screen and (max-width: 1424px) {
-	.jydesktop {
-		display: none;
-	}
+  .jydesktop {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1425px) {
-	.jymobile {
-		display: none;
-	}
+  .jymobile {
+    display: none;
+  }
 }
 
 /* POPUP CSS */
 @font-face {
-    font-family: 'nasalizationregular';
-    src: url('../webfontkit-20200827-234732/nasalization-rg-webfont.woff2') format('woff2'),
-         url('../webfontkit-20200827-234732/nasalization-rg-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "nasalizationregular";
+  src: url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff2")
+      format("woff2"),
+    url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .hg-nasa {
-    font-family: 'nasalizationregular';
+  font-family: "nasalizationregular";
 }
 
 .hg-noOfPassenger {
+<
 	display: flex;
 	justify-content: center;
 	align-items: center !important;
@@ -203,10 +301,11 @@ body {
 	top: 40%;
 	left: 25%;
 	color: #ffffff;
+
 }
 
-
 #hg-popup {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,16 +354,18 @@ body {
 	align-self: center;
 	margin-bottom: 15px;
 	margin-right: 10px;
+
 }
 
 #number:focus {
-	outline: none;
+  outline: none;
 }
 
 .number {
-	font-size: 50px;
-	letter-spacing: 1.5px;
+  font-size: 50px;
+  letter-spacing: 1.5px;
 }
+
 
 
 .gnnavcontainer {
