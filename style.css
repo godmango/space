@@ -1,3 +1,42 @@
+.bran-card-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  min-height: 800 px;
+  max-width: 1170 px;
+  padding: 25px;
+  background-image: url(https://vistapointe.net/images/stars-wallpaper-3.jpg);
+}
+
+.aboutus-p {
+  font-size: 1.2em;
+  color: white;
+}
+
+.cards {
+  margin-bottom: 25px;
+  /*min-height:600px;
+  min-width:360px;*/
+}
+
+.card-photo {
+  height: 300px;
+  width: 100%;
+}
+
+.card-style {
+  border-width: 20px;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
+}
+
+.card-img-top:hover {
+  opacity: 0.5;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -54,7 +93,7 @@ body {
   transform: rotate(315deg);
 }
 
-.ll-selectpeople {
+.ll-footer {
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -159,9 +198,9 @@ body {
   }
 }
 
-#ll-section2 {
+#hg-noOfPassenger {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url("./image/planetbackground.jpg");
   background-size: cover;
   background-position: top;
@@ -232,4 +271,246 @@ body {
   .jymobile {
     display: none;
   }
+}
+
+/* POPUP CSS */
+@font-face {
+  font-family: "nasalizationregular";
+  src: url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff2")
+      format("woff2"),
+    url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hg-nasa {
+  font-family: "nasalizationregular";
+}
+
+.hg-noOfPassenger {
+  display: flex;
+  justify-content: center;
+}
+
+#hg-popup {
+  background-color: #00223e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  max-width: 100vw;
+  height: 100vh;
+  /* position: relative; */
+}
+
+.hg-popup-container {
+  margin: 0 auto;
+  /* make picture center on smaller sizes */
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  width: 800px;
+  height: 700px;
+
+  /* background-image: url("../img/image.jpg"); */
+  /* background-image: url("https://us.123rf.com/450wm/jemastock/jemastock1803/jemastock180302350/96766477-astronaut-helmet-over-black-background-vector-clothing-design.jpg?ver=6"); */
+  /* background-size: cover; */
+  /* background-size: contain;
+    background-repeat: no-repeat; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hg-popup-img {
+  position: absolute;
+  /* margin-bottom: -560px; */
+  overflow: hidden;
+  height: 800px;
+}
+
+.hg-popup-content {
+  width: 270px;
+  height: 350px;
+  padding: 0 270px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "nasalizationregular";
+  top: 20%;
+}
+
+#number {
+  width: 70px;
+  border: none;
+  align-self: center;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+#number:focus {
+  outline: none;
+}
+
+.number {
+  font-size: 50px;
+  letter-spacing: 1.5px;
+}
+
+.gncontainer {
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  height: 80px;
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+
+.gnlogospacing {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbarfont {
+  color: white;
+  padding-top: 18%;
+}
+
+.gnnavstyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.gnnavstyle a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.gnnavstyle:hover {
+  text-decoration: none;
+}
+
+.gnfooter-icons {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.gnfooter-icons > .fab {
+  margin: 15px;
+}
+
+.gnfooter-icons > .fab:hover {
+  color: #d1d0d0;
+}
+
+.gnbtnplacement {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.gnbtn {
+  border: 0px;
+  font-size: 20px;
+  width: 252.656px;
+  height: 47.4844px;
+  border-radius: 500px;
+  transition-duration: 0.3s;
+  font-weight: bold;
+  background-color: #1d2124;
+}
+
+.gnbtn:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.gnbtn-primary {
+  color: #919496;
+}
+
+.gniconcolor {
+  color: #919496;
+  text-decoration: none;
+}
+
+.gniconplacement {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.gncontactpadding {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.gncontactinfo {
+  text-align: center;
+  color: #919496;
+}
+
+.gnaddress {
+  display: flex;
+  justify-content: center;
+  color: #919496;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 18rem;
+/*   perspective: 1000px; /* Remove this if you don't want the 3D effect */ */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+
+/* Style the back side */
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  background-color: black;
+  border-radius: 90%;
 }
