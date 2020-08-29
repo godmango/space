@@ -7,16 +7,23 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color:white;
     min-height: 800 px;
     max-width: 1170 px;
     padding: 25px;
-    background-image: url(https://vistapointe.net/images/stars-wallpaper-3.jpg);
+    /*new background image and code*/
+    background-image: url(https://i.imgur.com/IlusjAQ.jpg%22);
+    background-size: cover;
+    background-position: center;
+    padding: 5% 0;
 }
 
+
+
 span{
-  color: red;
+  color:  #fc3d21;
+  font-family: 'nasalizationregular';
   font-weight: 500;
+  font-size: larger;
 }
 
 .aboutus-p{
@@ -30,19 +37,20 @@ span{
   min-width:360px;*/
 }
 
-
+/*should we change the width?*/
 .card-photo {
     height: 300px;
     width: 100%;
 }
 
-
-
 .card-style {
-  border-width: 20px;
+  border-width: 0px;
 }
 
-
+.card-title{
+    font-family: 'nasalizationregular';
+    font-weight: 400;
+}
 
 .box-shadow {
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
@@ -266,14 +274,18 @@ body {
 	letter-spacing: 1.5px;
 }
 
-.gncontainer {
-	max-width: 1170px;
+.gnnavcontainer {
 	width: 100%;
-	}
+    }
+    
+    .gncontainer {
+        max-width: 1170px;
+        width: 100%;
+        }
 	
 	nav {
 	height: 80px;
-	background:black;
+    background-image: linear-gradient(to right, black , transparent);
 	display: flex;
 	justify-content: center;
 	}
@@ -285,7 +297,7 @@ body {
 
 	.navbarfont {
 		color: white;
-		padding-top: 18%
+		padding-top: 14%;
 	}
 	
 .gnnavstyle{
@@ -296,7 +308,7 @@ body {
 	}
 	
 	.gnnavstyle a{
-	color: white;
+	color: black;
 	margin-right: 15px;
 	text-decoration: none;
 	padding-right: 10px;
