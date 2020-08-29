@@ -6,6 +6,14 @@ body {
   margin: 0px;
 }
 
+@keyframes scrollPrice {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1425px 0px;
+  }
+}
 @keyframes scrollBackground {
   0% {
     background-position: 0 0;
@@ -19,7 +27,7 @@ body {
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("https://i.imgur.com/nbtlerW.jpg");
+    url("/image/intro-background.jpg");
   background-size: cover;
   animation: scrollBackground 60s infinite;
   color: white;
@@ -46,10 +54,182 @@ body {
   transform: rotate(315deg);
 }
 
+.ll-selectpeople {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(/image/numberpeople.png);
+  background-position: bottom left;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ll-box div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30%;
+}
+
+.ll-box div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
+
+.ll-box div:nth-child(2) {
+  top: 90%;
+  left: 50%;
+  animation: animate 7s linear infinite;
+}
+
+.ll-box div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: animate 9s linear infinite;
+}
+
+.ll-box div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+
+.ll-box div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+
+.ll-box div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+
+.ll-box div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: animate 15s linear infinite;
+}
+
+.ll-box div:nth-child(8) {
+  position: absolute;
+  top: 32%;
+  left: 25%;
+  animation: animate 16s linear infinite;
+}
+
+.ll-box div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: animate 9s linear infinite;
+}
+
+.ll-box div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+
+.ll-box div:nth-child(11) {
+  top: 50%;
+  left: 1%;
+  animation: animate 5s linear infinite;
+}
+
+.ll-box div:nth-child(12) {
+  top: 80%;
+  left: 90%;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(-90px) rotate(360deg);
+    opacity: 1;
+  }
+}
+
 #ll-section2 {
   width: 100%;
-  height: 100vh;
-  background-image: url("https://i.imgur.com/IlusjAQ.jpg");
+  height: 100%;
+  background-image: url("./image/planetbackground.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
+  padding: 5% 0;
+}
+
+.jycrop1 {
+  width: 130px;
+  height: auto;
+
+  border-radius: 50%;
+}
+
+.jycrop2 {
+  width: 330px;
+}
+.jyprow1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.jyprow2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.jydesktop .jymercury,
+.jydesktop .jyuranus {
+  margin-left: 26vw;
+}
+
+.jydesktop .jyearth,
+.jydesktop .jyjupiter {
+  margin-left: 10vw;
+}
+
+.jydesktop .jyvenus,
+.jydesktop .jyneptune {
+  margin-right: 26vw;
+}
+
+.jydesktop .jymars {
+  margin-right: 10vw;
+}
+
+.jydesktop .jysaturn {
+  margin-right: 8vw;
+}
+
+.jymobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jymobile img {
+  margin: 30px;
+}
+
+@media only screen and (max-width: 1424px) {
+  .jydesktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1425px) {
+  .jymobile {
+    display: none;
+  }
 }
