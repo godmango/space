@@ -173,7 +173,6 @@ body {
 	}
 }
 
-
 /* POPUP CSS */
 @font-face {
     font-family: 'nasalizationregular';
@@ -190,12 +189,16 @@ body {
 
 .hg-noOfPassenger {
 	display: flex;
-    justify-content: center;
+	justify-content: center;
+	align-items: center !important;
+	position: absolute;
+	top: 40%;
+	left: 25%;
+	color: #ffffff;
 }
 
 
 #hg-popup {
-    background-color: #00223e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,8 +206,7 @@ body {
 	overflow: hidden;
 	max-width: 100vw;
 	height: 100vh;
-    /* position: relative; */
-
+	color: #ffffff;
 }
 
 .hg-popup-container {
@@ -216,23 +218,13 @@ body {
 	position: relative;
 	width: 800px;
 	height: 700px;
-    
-    /* background-image: url("../img/image.jpg"); */
-    /* background-image: url("https://us.123rf.com/450wm/jemastock/jemastock1803/jemastock180302350/96766477-astronaut-helmet-over-black-background-vector-clothing-design.jpg?ver=6"); */
-    /* background-size: cover; */
-    /* background-size: contain;
-    background-repeat: no-repeat; */
-
     display: flex;
     justify-content: center;
 	align-items: center;
-	overflow: hidden;
-
 }
 
 .hg-popup-img {
 	position: absolute;
-	/* margin-bottom: -560px; */
 	overflow: hidden;
 	height: 800px;
 	
@@ -246,11 +238,11 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'nasalizationregular';
-    top: 20%;
+    top: 15%;
 }
 
 #number {
-	width: 70px;
+	width: 55px;
 	border: none;
 	align-self: center;
 	margin-bottom: 15px;
@@ -266,122 +258,68 @@ body {
 	letter-spacing: 1.5px;
 }
 
-.gncontainer {
-	max-width: 1170px;
-	width: 100%;
-	}
-	
-	nav {
-	height: 80px;
-	background:black;
-	display: flex;
-	justify-content: center;
-	}
-
-	.gnlogospacing {
-		display: flex;
-		justify-content: flex-start;
-	}
-
-	.navbarfont {
-		color: white;
-		padding-top: 18%
-	}
-	
-.gnnavstyle{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	text-decoration: none;
-	}
-	
-	.gnnavstyle a{
-	color: white;
-	margin-right: 15px;
-	text-decoration: none;
-	padding-right: 10px;
-	padding-left: 10px;
-	}
-	
-	.gnnavstyle:hover{
-	text-decoration: none;
-	}
-	
-	.gnfooter-icons {
-		flex: 3;
-		display: flex;
-		justify-content: center;
-		}
-		
-	.gnfooter-icons > .fab {
-		margin: 15px;
-		}
-		
-	.gnfooter-icons > .fab:hover {
-		color: #d1d0d0;
-		}
-
-	.gnbtnplacement {
-			display: flex;
-			justify-content: center;
-			padding: 10px;
-			}
-			
-	.gnbtn {
-			border: 0px;
-			font-size: 20px;
-			width: 252.656px;
-			height: 47.4844px;
-			border-radius: 500px;
-			transition-duration: 0.3s;
-			font-weight: bold;
-			background-color: #1d2124;
-			}
-
-
-	.gnbtn:hover{
-		background-color: black;
-		cursor: pointer;
-	}
-
-	.gnbtn-primary {
-		color: #919496;
-	}
-
-	.gniconcolor {
-				color:#919496;
-				text-decoration: none;
-				}
-				
-	.gniconplacement {
-				display:flex;
-				justify-content:center;
-				flex: 1;
-				}
-				
-	.gncontactpadding{
-					padding-left: 5px;
-					padding-right: 5px;
-					}
-					
-	.gncontactinfo{
-					text-align:center;
-					color: #919496;
-					}
-
-	.gnaddress{
-			display:flex;
-			justify-content: center;
-			color: #919496;
-			}
-
-footer {
-	width: 100%;
-	background-color: black;
+select.number {
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	-ms-border-radius: 200px;
+	-o-border-radius: 200px;
 }
-						
-					
+
+.number option {
+	background-color: gray !important;
+	padding: 0 auto;
 	
-			
-		
-	
+}
+
+/* PARTICLES */
+#particles-js {
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+
+	/* display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto !important; */
+  }
+  
+  /* ---- stats.js ---- */
+  
+  .count-particles{
+	background: #000022;
+	position: absolute;
+	top: 48px;
+	left: 0;
+	width: 80px;
+	color: #13E8E9;
+	font-size: .8em;
+	text-align: left;
+	text-indent: 4px;
+	line-height: 14px;
+	padding-bottom: 2px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+  }
+  
+  .js-count-particles{
+	font-size: 1.1em;
+  }
+  
+  #stats,
+  .count-particles{
+	-webkit-user-select: none;
+  }
+  
+  #stats{
+	border-radius: 3px 3px 0 0;
+	overflow: hidden;
+  }
+  
+  .count-particles{
+	border-radius: 0 0 3px 3px;
+  }
