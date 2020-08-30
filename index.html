@@ -1,452 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>planIt- A Space Adventure Company</title>
-    <!-- BOOTSTRAP -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PlanIt- A Space Adventure Company</title>
+		<!-- BOOTSTRAP -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
 
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
-    />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+			integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+			crossorigin="anonymous"
+		/>
 
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
+	<body>
+		<section>
+			<!-- Ellen (mainpage) -->
+			<div class="ll-welcome">
+				<nav>
+					<div class="gnnavcontainer gnnavstyle">
+						<div class="gnlogospacing">
+							<img
+								src="https://media.giphy.com/media/VDZBuTxxd4wPoEB1C9/giphy.gif"
+								width="100px"
+							/>
+							<span class="navbarfont">PlanIt</span>
+							<div class="blankSpace"></div>
+						</div>
+						<div>
+							<a href="#ll-aboutUs" class="crew">Our Crew</a>
+						</div>
+					</div>
 
-  <body>
-    <section>
-      <!-- Ellen (mainpage) -->
-      <div class="ll-welcome">
-        <nav>
-          <div class="gnnavcontainer gnnavstyle">
-            <div class="gnlogospacing">
-              <img
-                src="https://media.giphy.com/media/VDZBuTxxd4wPoEB1C9/giphy.gif"
-                width="100px"
-              />
-              <span class="navbarfont">PlanIt</span>
-              <div class="blankSpace"></div>
-            </div>
-            <div >
-              <a href="#ll-aboutUs" class="crew"">Our Crew</a>
-            </div>
-          </div>
+					<!-- Branden / Giau (navbar) -->
+				</nav>
+				<div class="titlefont">
+					Are you ready <br />for your next adventure?
+				</div>
 
-          <!-- Branden / Giau (navbar) -->
-        </nav>
-        <div>Are you ready <br />for your next adventure?</div>
+				<div class="ll-rotateRocket" id="ll-rocketButton" onclick="flyRocket">
+					<a href="#ll-guestQty" class="ll-scroll">
+						<ion-icon name="rocket-outline"></ion-icon>
+					</a>
+				</div>
+			</div>
 
-        <div class="ll-rotateRocket" id="ll-rocketButton" onclick="flyRocket">
-          <a href="#ll-guestQty" class="ll-scroll">
-            <ion-icon name="rocket-outline"></ion-icon>
-          </a>
-        </div>
-      </div>
+			<!-- passenger no -->
+			<!-- particles.js container -->
 
-      <!-- passenger no -->
-      <!-- particles.js container -->
+			<div id="ll-guestQty">
+				<div id="particles-js"></div>
 
-      <div id="ll-guestQty">
-        <div id="particles-js"></div>
+				<div class="hg-noOfPassenger">
+					<label class="hg-nasa mr-4 number" for="number"
+						><ion-icon name="people-outline"></ion-icon> &nbsp;No. of
+						passenger:</label
+					>
+					<select
+						class="hg-nasa number"
+						name="number"
+						id="number"
+						onchange="getNoOfPassenger()"
+					>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+					<a href="#ll-planet"
+						><ion-icon name="arrow-down-circle-outline" size="large"></ion-icon
+					></a>
+				</div>
+			</div>
 
-        <div class="hg-noOfPassenger">
-          <label class="hg-nasa mr-4 number" for="number"
-            ><ion-icon name="people-outline"></ion-icon> &nbsp;No. of
-            passenger:</label
-          >
-          <select
-            class="hg-nasa number"
-            name="number"
-            id="number"
-            onchange="getNoOfPassenger()"
-          >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-          <a href="#ll-planet"
-            ><ion-icon name="arrow-down-circle-outline" size="large"></ion-icon
-          ></a>
-        </div>
-      </div>
-
-
-      <!-- stats - count particles -->
-      <!-- <div class="count-particles">
+			<!-- stats - count particles -->
+			<!-- <div class="count-particles">
 				<span class="js-count-particles"></span>
 			</div> -->
 
-      <div id="ll-planet">
-        <div class="jydesktop">
-          <div class="jyprow1">
-            <img
-              class="jycrop1 jymercury"
-              src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
-              alt="mercury"
-              class="hg-planets hg-nasa"
-              onClick="reply_click('Mercury')"
-              title="Mercury"
-            />
-            <img
-              class="jycrop1 jyvenus"
-              src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
-              alt="venus"
-              class="hg-planets hg-nasa"
-              onClick="reply_click('Venus')"
-              title="Venus"
-            />
-          </div>
-          <div class="jyprow2">
-            <img
-              class="jycrop1 jyearth"
-              src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
-              alt="earth"
-              title="You are here"
-            />
-            <img
-              class="jycrop1 jymars"
-              src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
-              alt="mars"
-              class="hg-planets hg-nasa"
-              onClick="reply_click('Mars')"
-              title="Mars"
-            />
-          </div>
-          <div class="ll-extraRow">
-            <a href="#ll-aboutUs"
-              ><ion-icon name="planet-outline"></ion-icon
-            ></a>
-            &nbsp;Which planet would you like to visit?
-          </div>
-          <div class="jyprow2">
-            <div class="jyjupiter" style="width: 390px">
-              <img
-                class="jycrop1"
-                src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
-                alt="jupiter"
-                class="hg-planets hg-nasa"
-                onClick="reply_click('Jupiter')"
-                title="Jupiter"
-              />
-            </div>
+			<div id="ll-planet">
+				<div class="jydesktop">
+					<div class="jyprow1">
+						<img
+							class="jycrop1 jymercury"
+							src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
+							alt="mercury"
+							class="hg-planets hg-nasa"
+							onClick="reply_click('Mercury')"
+							title="Mercury"
+						/>
+						<img
+							class="jycrop1 jyvenus"
+							src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
+							alt="venus"
+							class="hg-planets hg-nasa"
+							onClick="reply_click('Venus')"
+							title="Venus"
+						/>
+					</div>
+					<div class="jyprow2">
+						<img
+							class="jycrop1 jyearth"
+							src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
+							alt="earth"
+							title="You are here"
+						/>
+						<img
+							class="jycrop1 jymars"
+							src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
+							alt="mars"
+							class="hg-planets hg-nasa"
+							onClick="reply_click('Mars')"
+							title="Mars"
+						/>
+					</div>
+					<div class="ll-extraRow">
+						<a href="#ll-aboutUs"
+							><ion-icon name="planet-outline"></ion-icon
+						></a>
+						&nbsp;Which planet would you like to visit?
+					</div>
+					<div class="jyprow2">
+						<div class="jyjupiter" style="width: 390px">
+							<img
+								class="jycrop1"
+								src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
+								alt="jupiter"
+								class="hg-planets hg-nasa"
+								onClick="reply_click('Jupiter')"
+								title="Jupiter"
+							/>
+						</div>
 
-            <img
-              class="jycrop2 jysaturn"
-              src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
-              alt="saturn"
-              class="hg-planets hg-nasa"
-              title="saturn"
-              onClick="reply_click('Saturn')"
-              title="Saturn"
-            />
-          </div>
-          <div class="jyprow1">
-            <img
-              class="jycrop1 jyuranus"
-              src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
-              alt="uranus"
-              class="hg-planets hg-nasa"
-              onClick="reply_click('Uranus')"
-              title="Uranus"
-            />
-            <img
-              class="jycrop1 jyneptune"
-              src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
-              alt="neptune"
-              class="hg-planets hg-nasa"
-              onClick="reply_click('Neptune')"
-              title="Neptune"
-            />
-          </div>
-        </div>
+						<img
+							class="jycrop2 jysaturn"
+							src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
+							alt="saturn"
+							class="hg-planets hg-nasa"
+							title="saturn"
+							onClick="reply_click('Saturn')"
+							title="Saturn"
+						/>
+					</div>
+					<div class="jyprow1">
+						<img
+							class="jycrop1 jyuranus"
+							src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
+							alt="uranus"
+							class="hg-planets hg-nasa"
+							onClick="reply_click('Uranus')"
+							title="Uranus"
+						/>
+						<img
+							class="jycrop1 jyneptune"
+							src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
+							alt="neptune"
+							class="hg-planets hg-nasa"
+							onClick="reply_click('Neptune')"
+							title="Neptune"
+						/>
+					</div>
+				</div>
 
-        <div class="jymobile">
-          <div class="ll-extraRow">
-            <a href="#ll-aboutUs"
-              ><ion-icon name="planet-outline"></ion-icon
-            ></a>
-            &nbsp; Which planet would you like to visit?
-          </div>
+				<div class="jymobile">
+					<div class="ll-extraRow">
+						<a href="#ll-aboutUs"
+							><ion-icon name="planet-outline"></ion-icon
+						></a>
+						&nbsp; Which planet would you like to visit?
+					</div>
 
-          <img
-            class="jycrop1 jymercury"
-            src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
-            alt="mercury"
-            class="hg-planets hg-nasa"
-            onClick="reply_click('Mercury')"
-            title="Mercury"
-          />
-          <img
-            class="jycrop1 jyvenus"
-            src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
-            alt="venus"
-            class="hg-planets hg-nasa"
-            onClick="reply_click('Venus')"
-            title="Venus"
-          />
-          <img
-            class="jycrop1 jyearth"
-            src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
-            alt="earth"
-            class="hg-planets hg-nasa"
-            onClick="reply_click('Earth')"
-            title="Earth"
-          />
-          <img
-            class="jycrop1 jymars"
-            src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
-            alt="mars"
-            class="hg-planets hg-nasa"
-            onClick="reply_click('Mars')"
-            title="Mars"
-          />
+					<img
+						class="jycrop1 jymercury"
+						src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
+						alt="mercury"
+						class="hg-planets hg-nasa"
+						onClick="reply_click('Mercury')"
+						title="Mercury"
+					/>
+					<img
+						class="jycrop1 jyvenus"
+						src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
+						alt="venus"
+						class="hg-planets hg-nasa"
+						onClick="reply_click('Venus')"
+						title="Venus"
+					/>
+					<img
+						class="jycrop1 jyearth"
+						src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
+						alt="earth"
+						class="hg-planets hg-nasa"
+						onClick="reply_click('Earth')"
+						title="Earth"
+					/>
+					<img
+						class="jycrop1 jymars"
+						src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
+						alt="mars"
+						class="hg-planets hg-nasa"
+						onClick="reply_click('Mars')"
+						title="Mars"
+					/>
 
-          <img
-            class="jycrop1 jyjupiter"
-            src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
-            alt="jupiter"
-            class="hg-planets hg-nasa"
-            onClick="reply_click('Jupiter')"
-            title="Jupiter"
-          />
+					<img
+						class="jycrop1 jyjupiter"
+						src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
+						alt="jupiter"
+						class="hg-planets hg-nasa"
+						onClick="reply_click('Jupiter')"
+						title="Jupiter"
+					/>
 
-          <img
-            class="jycrop2 jysaturn"
-            src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
-            alt="saturn"
-            class="hg-planets hg-nasa"
-            onClick="reply_click('Saturn')"
-            title="Saturn"
-          />
-          <img
-            class="jycrop1 jyuranus"
-            src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
-            alt="uranus"
-            class="hg-planets hg-nasa"
-            onClick="reply_click('Uranus')"
-            title="Uranus"
-          />
-          <img
-            class="jycrop1 jyneptune"
-            src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
-            alt="neptune"
-            class="hg-planets hg-nasa"
-            onClick="reply_click('Neptune')"
-            title="Neptune"
-          />
-        </div>
-      </div>
-      <!-- POPUP -->
-      <div id="hg-popup" style="display: none"></div>
+					<img
+						class="jycrop2 jysaturn"
+						src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
+						alt="saturn"
+						class="hg-planets hg-nasa"
+						onClick="reply_click('Saturn')"
+						title="Saturn"
+					/>
+					<img
+						class="jycrop1 jyuranus"
+						src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
+						alt="uranus"
+						class="hg-planets hg-nasa"
+						onClick="reply_click('Uranus')"
+						title="Uranus"
+					/>
+					<img
+						class="jycrop1 jyneptune"
+						src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
+						alt="neptune"
+						class="hg-planets hg-nasa"
+						onClick="reply_click('Neptune')"
+						title="Neptune"
+					/>
+				</div>
+			</div>
+			<!-- POPUP -->
+			<div id="hg-popup" style="display: none"></div>
 
+			<div id="ll-aboutUs">
+				<div class="row aboutUsHeading">
+					<div class="col col-md-12">
+						<p>
+							Ground Control to PlanIt, flying with our astronauts is FUN ...
+						</p>
+					</div>
+				</div>
+				<div class="row margin">
+					<div class="col col-md-6 col-sm-12">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front" style="width: 18rem">
+									<img
+										src="/image/brandenpng.png"
+										class="card-img-top"
+										alt=""
+									/>
+								</div>
+								<div class="flip-card-back">
+									<h2>Branden</h2>
+									<p>
+										Developer <br />
+										Flight hours: 9509
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col col-md-6">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front" style="width: 18rem">
+									<img src="/image/giaupng.png" class="card-img-top" alt="" />
+								</div>
+								<div class="flip-card-back">
+									<h2>Giau</h2>
+									<p>
+										Developer <br />
+										Flight hours: 9125
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-      <div id="ll-aboutUs">
-        <div class="row aboutUsHeading">
-          <div class="col col-md-12">
-            <p>
-              Ground Control to PlanIt, flying with our astronauts is FUN ...
-            </p>
-          </div>
-        </div>
-        <div class="row margin">
-          <div class="col col-md-6 col-sm-12">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front" style="width: 18rem">
-                  <img
-                    src="/image/brandenpng.png"
-                    class="card-img-top"
-                    alt=""
-                  />
-                </div>
-                <div class="flip-card-back">
-                  <h2>Branden</h2>
-                  <p>
-                    Developer <br />
-                    Flight hours: 9509
-                  </p>
+					<div class="row">
+						<div class="col col-md-12">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front" style="width: 18rem">
+										<img
+											src="/image/huongpng.png"
+											class="card-img-top"
+											alt=""
+										/>
+									</div>
+									<div class="flip-card-back">
+										<h2>Huong</h2>
+										<p>
+											Developer <br />
+											Flight hours: 8542
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col col-md-6">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front" style="width: 18rem">
-                  <img src="/image/giaupng.png" class="card-img-top" alt="" />
-                </div>
-                <div class="flip-card-back">
-                  <h2>Giau</h2>
-                  <p>
-                    Developer <br />
-                    Flight hours: 9125 
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div class="row">
+						<div class="col col-md-6 col-sm-12">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front" style="width: 18rem">
+										<img
+											src="/image/junyoungpng.png"
+											class="card-img-top"
+											alt=""
+										/>
+									</div>
+									<div class="flip-card-back">
+										<h2>Jun</h2>
+										<p>
+											Scrum Master <br />
+											Flight hours: 8652
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-md-6 col-sm-12">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front" style="width: 18rem">
+										<img src="/image/Linhpng.png" class="card-img-top" alt="" />
+									</div>
+									<div class="flip-card-back">
+										<h2>Linh Le</h2>
+										<p>
+											Product Owner <br />
+											Flight hours: 7451
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row aboutUsHeading">
+						<div class="col col-md-12">
+							<p>
+								... and SAFE
+								<a href="#footer"><ion-icon name="happy-outline"></ion-icon></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-          <div class="row">
-            <div class="col col-md-12">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front" style="width: 18rem">
-                    <img
-                      src="/image/huongpng.png"
-                      class="card-img-top"
-                      alt=""
-                    />
-                  </div>
-                  <div class="flip-card-back">
-                    <h2>Huong</h2>
-                    <p>
-                      Developer <br />
-                      Flight hours: 8542
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+		<footer id="footer">
+			<div class="ll-footer">
+				<div>
+					<div class="gnfooter-icons gniconplacement">
+						<a href="#" class="fab fa-instagram fa-2x gniconcolor"></a>
+						<a href="#" class="fab fa-facebook fa-2x gniconcolor"></a>
+						<a href="#" class="fab fa-twitter fa-2x gniconcolor"></a>
+					</div>
 
-          <div class="row">
-            <div class="col col-md-6 col-sm-12">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front" style="width: 18rem">
-                    <img
-                      src="/image/junyoungpng.png"
-                      class="card-img-top"
-                      alt=""
-                    />
-                  </div>
-                  <div class="flip-card-back">
-                    <h2>Jun</h2>
-                    <p>
-                      Scrum Master <br />
-                      Flight hours: 8652
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col col-md-6 col-sm-12">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front" style="width: 18rem">
-                    <img src="/image/Linhpng.png" class="card-img-top" alt="" />
-                  </div>
-                  <div class="flip-card-back">
-                    <h2>Linh Le</h2>
-                    <p>
-                      Product Owner <br />
-                      Flight hours: 7451
-                    </p>
-                    
-                  </div>
+					<div class="gnbtnplacement">
+						<button class="gnbtn gnbtn-primary" onClick="timeTilLaunch()">
+							TIME TIL LAUNCH
+						</button>
+						<p id="demo" style="display: none"></p>
+					</div>
 
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row aboutUsHeading">
-            <div class="col col-md-12">
-              <p>... and SAFE <a href="#footer"><ion-icon name="happy-outline"></ion-icon></a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+					<div class="gncontactinfo">
+						<p class="gnaddress">
+							12 Ton Dan Street, Ward 13, District 4, Ho Chi Minh City, Vietnam
+						</p>
+						<p>
+							<span> +84 987 863 2637 </span>
+							<span class="gncontactpadding"> | </span>
+							<span> group1@planit.com</span>
+						</p>
+					</div>
+				</div>
 
-    <footer id="footer">
+				<!-- Branden / Giau (footer) -->
 
-      <div class="ll-footer">
-        <div>
-          <div class="gnfooter-icons gniconplacement">
-            <a href="#" class="fab fa-instagram fa-2x gniconcolor"></a>
-            <a href="#" class="fab fa-facebook fa-2x gniconcolor"></a>
-            <a href="#" class="fab fa-twitter fa-2x gniconcolor"></a>
-          </div>
+				<div class="ll-box">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</footer>
 
-          <div class="gnbtnplacement">
-            <button class="gnbtn gnbtn-primary" onClick="timeTilLaunch()">TIME TIL LAUNCH</button>
-            <p id="demo" style="display:none"></p>
-            </div>
+		<!-- JQUERY -->
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+			crossorigin="anonymous"
+		></script>
 
+		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-          <div class="gncontactinfo">
-            <p class="gnaddress">
-              12 Ton Dan Street, Ward 13, District 4, Ho Chi Minh City, Vietnam
-            </p>
-            <p>
-              <span> +84 987 863 2637 </span>
-              <span class="gncontactpadding"> | </span>
-              <span> group1@planit.com</span>
-            </p>
-          </div>
-        </div>
+		<!-- PARTICLES JS -->
+		<script src="./particles.js"></script>
+		<script src="./app.js"></script>
 
-        <!-- Branden / Giau (footer) -->
-
-        <div class="ll-box">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- JQUERY -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <!-- PARTICLES JS -->
-    <script src="./particles.js"></script>
-    <script src="./app.js"></script>
-
-
-    <!-- MAIN JS -->
-    <script src="./myscripts.js"></script>
-  </body>
-
+		<!-- MAIN JS -->
+		<script src="./myscripts.js"></script>
+	</body>
 </html>

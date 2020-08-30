@@ -261,10 +261,9 @@ a:hover {
 .hg-noOfPassenger {
 	display: flex;
 	justify-content: center;
-	align-items: center !important;
+	align-items: center;
 	position: absolute;
-	/* top: 45%; */
-	/* left: 30%; */
+	text-align: center;
 	color: #ffffff;
 }
 
@@ -272,6 +271,8 @@ a:hover {
 	height: 100vh;
 	position: relative;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #hg-popup {
@@ -330,7 +331,7 @@ a:hover {
 }
 
 .number {
-	font-size: 50px;
+	font-size: 40px;
 	letter-spacing: 1.5px;
 }
 
@@ -652,4 +653,8 @@ select.number {
 
 .gniconcolor {
 	text-decoration: none;
+}
+
+.titlefont {
+	font-family: "nasalizationregular";
 }
