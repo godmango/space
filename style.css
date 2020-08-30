@@ -1,42 +1,3 @@
-.bran-card-section {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	background-color: white;
-	min-height: 800 px;
-	max-width: 1170 px;
-	padding: 25px;
-	background-image: url(https://vistapointe.net/images/stars-wallpaper-3.jpg);
-}
-
-.aboutus-p {
-	font-size: 1.2em;
-	color: white;
-}
-
-.cards {
-	margin-bottom: 25px;
-	/*min-height:600px;
-  min-width:360px;*/
-}
-
-.card-photo {
-	height: 300px;
-	width: 100%;
-}
-
-.card-style {
-	border-width: 0px;
-}
-
-.box-shadow {
-	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
-}
-
-.card-img-top:hover {
-	opacity: 0.5;
-}
-
 html {
 	scroll-behavior: smooth;
 }
@@ -45,20 +6,29 @@ body {
 	margin: 0px;
 }
 
-@keyframes scrollPrice {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: -1425px 0px;
-	}
+a {
+	text-decoration: none;
+	color: white;
 }
+a:hover {
+	color: white;
+}
+
 @keyframes scrollBackground {
 	0% {
 		background-position: 0 0;
 	}
 	100% {
 		background-position: 0px -1080px;
+	}
+}
+
+@keyframes scrollPrice {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -600px 0px;
 	}
 }
 
@@ -72,15 +42,11 @@ body {
 	color: white;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
-	font-family: "Special Elite", cursive;
 	font-size: 60px;
 	text-align: center;
-}
-
-.ll-bankspace {
-	height: 40%;
+	font-family: "Special Elite", cursive;
 }
 
 .ll-scroll {
@@ -91,18 +57,6 @@ body {
 
 .ll-rotateRocket:hover {
 	transform: rotate(315deg);
-}
-
-.ll-footer {
-	position: relative;
-	height: 100vh;
-	overflow: hidden;
-	background-image: url(/image/numberpeople.png);
-	background-position: bottom left;
-	color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .ll-box div {
@@ -198,24 +152,36 @@ body {
 	}
 }
 
-#hg-noOfPassenger {
-	width: 100%;
-	height: 100vh;
-	background-image: url("./image/planetbackground.jpg");
-	background-size: cover;
-	background-position: top;
-	padding: 5% 0;
+#ll-planet {
+	background-image: url(/image/planetbackground.jpg);
+	background-position: center;
+	min-height: 100vh;
+	height: 100%;
+	padding: 3% 0;
+}
+
+.ll-extraRow {
+	color: white;
+	font-family: "nasalizationregular";
+	src: url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff2")
+			format("woff2"),
+		url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff")
+			format("woff");
+	font-size: 40px;
+	padding: 10px 0px;
+	text-align: center;
 }
 
 .jycrop1 {
 	width: 130px;
 	height: auto;
-
+	cursor: pointer;
 	border-radius: 50%;
 }
 
 .jycrop2 {
 	width: 330px;
+	cursor: pointer;
 }
 .jyprow1 {
 	display: flex;
@@ -288,25 +254,32 @@ body {
 	font-family: "nasalizationregular";
 }
 .hg-noOfPassenger {
-	display: flex;
+	/* display: flex;
 	justify-content: center;
-	align-items: center !important;
+  align-items: center !important; */
 	position: absolute;
-	top: 40%;
-	left: 25%;
+	top: 45%;
+	left: 30%;
 	color: #ffffff;
+}
+
+#ll-guestQty {
+	height: 100vh;
+	position: relative;
+	display: flex;
 }
 
 #hg-popup {
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
 	text-align: center;
 	overflow: hidden;
 	max-width: 100vw;
 	height: 100vh;
 	color: #ffffff;
+	background-image: url(/image/numberpeople.png);
+	animation: scrollPrice 5s infinite;
 }
 
 .hg-popup-container {
@@ -325,8 +298,7 @@ body {
 .hg-popup-img {
 	position: absolute;
 	overflow: hidden;
-	/* width: 100vw; */
-	/* height: 800px; */
+	height: 800px;
 }
 
 .hg-popup-content {
@@ -361,16 +333,47 @@ body {
 	width: 100%;
 }
 
+.gnnavcontainer {
+	width: 100%;
+}
+
 .gncontainer {
 	max-width: 1170px;
 	width: 100%;
 }
 
 nav {
-	height: 80px;
-	background-image: linear-gradient(to right, black, transparent);
+	height: 50px;
+	width: 100%;
+	background-color: transparent;
+	/* background-image: linear-gradient(to right, black, transparent); */
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
+	font-family: "nasalizationregular";
+	src: url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff2")
+			format("woff2"),
+		url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff")
+			format("woff");
+	color: white;
+	font-size: 30px;
+}
+
+.blankSpace {
+	width: 60%;
+}
+
+.crew {
+	font-family: "nasalizationregular";
+	src: url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff2")
+			format("woff2"),
+		url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff")
+			format("woff");
+	color: white;
+	font-size: 30px;
+}
+.crew:hover {
+	color: white;
 }
 
 .gnlogospacing {
@@ -391,15 +394,15 @@ nav {
 }
 
 .gnnavstyle a {
-	color: black;
 	margin-right: 15px;
-	text-decoration: none;
-	padding-right: 10px;
-	padding-left: 10px;
-}
-
-.gnnavstyle:hover {
-	text-decoration: none;
+	padding: 10px;
+	font-family: "nasalizationregular";
+	src: url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff2")
+			format("woff2"),
+		url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff")
+			format("woff");
+	color: white;
+	font-size: 30px;
 }
 
 .gnfooter-icons {
@@ -465,52 +468,85 @@ select.number {
 	background-size: cover;
 	position: relative;
 
-	display: flex;
-	justify-content: center;
+	/* display: flex; */
+	/* justify-content: center;
 	align-items: center;
+	margin: 0 auto !important; */
 }
 
 /* ---- stats.js ---- */
 
-.count-particles {
+/* .count-particles{
+
 	background: #000022;
 	position: absolute;
 	top: 48px;
 	left: 0;
-	width: 80px;
-	color: #13e8e9;
-	font-size: 0.8em;
+
+  width: 80px;
+  height:100% */
+/* color: #13E8E9;
+	font-size: 1.8em;
+
 	text-align: left;
 	text-indent: 4px;
 	line-height: 14px;
 	padding-bottom: 2px;
 	font-family: Helvetica, Arial, sans-serif;
-	font-weight: bold;
-}
 
-.js-count-particles {
+  font-weight: bold;
+  border-radius: 0 0 3px 3px; */
+/* }
+
+  
+  .js-count-particles{
 	font-size: 1.1em;
-}
-
-#stats,
-.count-particles {
+  }
+  
+  #stats,
+  .count-particles{
 	-webkit-user-select: none;
-}
-
-#stats {
+  }
+  
+  #stats{
 	border-radius: 3px 3px 0 0;
 	overflow: hidden;
+<
+  } */
+
+/* BELOW IS ABOUT US CSS */
+
+#ll-aboutUs {
+	min-height: 100vh;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-image: url(/image/footerbackground.png);
+	animation: scrollPrice 50s infinite;
+	padding: 2% 0;
+	background-size: cover;
 }
 
-.count-particles {
-	border-radius: 0 0 3px 3px;
+.row {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
+.col {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
 	background-color: transparent;
-	width: 300px;
-	height: 18rem;
+	width: 200px;
+	height: 200px;
 	/*   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -537,12 +573,53 @@ select.number {
 	height: 100%;
 	-webkit-backface-visibility: hidden; /* Safari */
 	backface-visibility: hidden;
+	color: white;
 }
 
 /* Style the back side */
 .flip-card-back {
 	color: white;
 	transform: rotateY(180deg);
-	background-image: url(https://image.freepik.com/free-vector/classic-astronaut-character-with-flat-design_23-2147911112.jpg);
-	background-size: fill;
+	background-color: transparent;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 50%;
+	border-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: "nasalizationregular";
+	src: url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff2")
+			format("woff2"),
+		url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff")
+			format("woff");
+}
+
+.aboutUsHeading {
+	color: white;
+	font-family: "nasalizationregular";
+	src: url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff2")
+			format("woff2"),
+		url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff")
+			format("woff");
+	font-size: 40px;
+}
+
+.ll-footer {
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+	background-color: black;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gncontactinfo {
+	text-align: center;
 }
