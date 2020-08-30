@@ -51,7 +51,9 @@ const cost_per_1000km = 1000;
 
 // function to get the number of passengers
 function getNoOfPassenger() {
+
   const numberOfPassenger = document.getElementById("number").value;
+
 
   return numberOfPassenger;
 }
@@ -64,7 +66,9 @@ function reply_click(clicked_id) {
     return;
   }
 
+
   let cost = 0;
+
 
   const chosenPlanet = arrayData.find((item) => item.key === planetName);
   const distanceToChosenPlanet = chosenPlanet.distance;
@@ -82,12 +86,14 @@ function reply_click(clicked_id) {
         <img src="https://i.pinimg.com/originals/56/a4/86/56a4868144d352eb4d7dc29b6fb79df7.gif" >
         </div>
         <div class="col-12 hg-popup-content text-center align-items-center">
+
             Distance: ${
               distanceToChosenPlanet.toLocaleString() +
               " KM " +
               "to " +
               planetName
             } <br>
+
             Total cost: ${cost.toLocaleString() + " USD"} <br>
             Expected travel time: ${chosenPlanet.duration.toLocaleString()}
         </div>
@@ -100,6 +106,7 @@ function reply_click(clicked_id) {
 
   smoothScroll(document.getElementById("hg-popup"));
 }
+
 
 window.smoothScroll = function (target) {
   var scrollContainer = target;
@@ -128,3 +135,4 @@ window.smoothScroll = function (target) {
   // start scrolling
   scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 };
+

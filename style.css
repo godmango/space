@@ -1,3 +1,4 @@
+
 html {
   scroll-behavior: smooth;
 }
@@ -172,12 +173,14 @@ a:hover {
   text-align: center;
 }
 
+
 .jycrop1 {
   width: 130px;
   height: auto;
 
   border-radius: 50%;
 }
+
 
 .jycrop2 {
   width: 330px;
@@ -254,6 +257,7 @@ a:hover {
 }
 
 .hg-noOfPassenger {
+
   /* display: flex;
 	justify-content: center;
   align-items: center !important; */
@@ -318,6 +322,7 @@ a:hover {
   align-self: center;
   margin-bottom: 15px;
   margin-right: 10px;
+
 }
 
 #number:focus {
@@ -328,6 +333,7 @@ a:hover {
   font-size: 50px;
   letter-spacing: 1.5px;
 }
+
 
 .gnnavcontainer {
   width: 100%;
@@ -473,22 +479,27 @@ select.number {
 /* ---- stats.js ---- */
 
 /* .count-particles{
+
 	background: #000022;
 	position: absolute;
 	top: 48px;
 	left: 0;
+
   width: 80px;
   height:100% */
 /* color: #13E8E9;
 	font-size: 1.8em;
+
 	text-align: left;
 	text-indent: 4px;
 	line-height: 14px;
 	padding-bottom: 2px;
 	font-family: Helvetica, Arial, sans-serif;
+
   font-weight: bold;
   border-radius: 0 0 3px 3px; */
 /* }
+
   
   .js-count-particles{
 	font-size: 1.1em;
@@ -502,6 +513,7 @@ select.number {
   #stats{
 	border-radius: 3px 3px 0 0;
 	overflow: hidden;
+<
   } */
 
 /* BELOW IS ABOUT US CSS */
@@ -609,3 +621,4 @@ select.number {
   justify-content: center;
   align-items: center;
 }
+
