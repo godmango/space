@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Changa&family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
     <!-- BOOTSTRAP -->
     <link
       rel="stylesheet"
@@ -24,54 +20,165 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <nav>
-      <div class="gncontainer gnnavstyle">
-        <div class="gnlogospacing">
-          <img
-            src="https://media.giphy.com/media/VDZBuTxxd4wPoEB1C9/giphy.gif"
-            width="100px"
-          />
-          <span class="navbarfont">planIt</span>
-        </div>
-        <a href="#">Our Crew</a>
-      </div>
-    </nav>
-
     <section>
       <!-- Ellen (mainpage) -->
       <div class="ll-welcome">
+        <nav>
+          <div class="gnnavcontainer gnnavstyle">
+            <div class="gnlogospacing">
+              <img
+                src="https://media.giphy.com/media/VDZBuTxxd4wPoEB1C9/giphy.gif"
+                width="100px"
+              />
+              <span class="navbarfont">PlanIt</span>
+              <div class="blankSpace"></div>
+            </div>
+            <div >
+              <a href="#ll-aboutUs" class="crew"">Our Crew</a>
+            </div>
+          </div>
+
+          <!-- Branden / Giau (navbar) -->
+        </nav>
         <div>Are you ready <br />for your next adventure?</div>
-        <div class="ll-bankspace"></div>
+
         <div class="ll-rotateRocket" id="ll-rocketButton" onclick="flyRocket">
-          <a href="#hg-noOfPassenger" class="ll-scroll">
+          <a href="#ll-guestQty" class="ll-scroll">
             <ion-icon name="rocket-outline"></ion-icon>
           </a>
         </div>
       </div>
 
       <!-- passenger no -->
-      <div id="hg-noOfPassenger">
-        <label class="hg-nasa mr-4 number" for="number"
-          >No. of passenger:</label
-        >
-        <select
-          class="hg-nasa number"
-          name="number"
-          id="number"
-          onchange="getNoOfPassenger()"
-        >
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </div>
-      <br />
+      <!-- particles.js container -->
 
-      <div class="jydesktop">
-        <div class="jyprow1">
+      <div id="ll-guestQty">
+        <div id="particles-js"></div>
+
+        <div class="hg-noOfPassenger">
+          <label class="hg-nasa mr-4 number" for="number"
+            ><ion-icon name="people-outline"></ion-icon> &nbsp;No. of
+            passenger:</label
+          >
+          <select
+            class="hg-nasa number"
+            name="number"
+            id="number"
+            onchange="getNoOfPassenger()"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <a href="#ll-planet"
+            ><ion-icon name="arrow-down-circle-outline" size="large"></ion-icon
+          ></a>
+        </div>
+      </div>
+
+      <!-- stats - count particles -->
+      <!-- <div class="count-particles">
+				<span class="js-count-particles"></span>
+			</div> -->
+
+      <div id="ll-planet">
+        <div class="jydesktop">
+          <div class="jyprow1">
+            <img
+              class="jycrop1 jymercury"
+              src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
+              alt="mercury"
+              class="hg-planets hg-nasa"
+              onClick="reply_click('Mercury')"
+              title="Mercury"
+            />
+            <img
+              class="jycrop1 jyvenus"
+              src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
+              alt="venus"
+              class="hg-planets hg-nasa"
+              onClick="reply_click('Venus')"
+              title="Venus"
+            />
+          </div>
+          <div class="jyprow2">
+            <img
+              class="jycrop1 jyearth"
+              src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
+              alt="earth"
+              title="Earth: we'll start from here"
+            />
+            <img
+              class="jycrop1 jymars"
+              src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
+              alt="mars"
+              class="hg-planets hg-nasa"
+              onClick="reply_click('Mars')"
+              title="Mars"
+            />
+          </div>
+          <div class="ll-extraRow">
+            <a href="#ll-aboutUs"
+              ><ion-icon name="planet-outline"></ion-icon
+            ></a>
+            &nbsp;Which planet would you like to visit?
+          </div>
+          <div class="jyprow2">
+            <div class="jyjupiter" style="width: 390px">
+              <img
+                class="jycrop1"
+                src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
+                alt="jupiter"
+                class="hg-planets hg-nasa"
+                onClick="reply_click('Jupiter')"
+                title="Jupiter"
+              />
+            </div>
+
+            <img
+              class="jycrop2 jysaturn"
+              src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
+              alt="saturn"
+              class="hg-planets hg-nasa"
+              title="saturn"
+              onClick="reply_click('Saturn')"
+              title="Saturn"
+            />
+          </div>
+          <div class="jyprow1">
+            <img
+              class="jycrop1 jyuranus"
+              src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
+              alt="uranus"
+              class="hg-planets hg-nasa"
+              onClick="reply_click('Uranus')"
+              title="Uranus"
+            />
+            <img
+              class="jycrop1 jyneptune"
+              src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
+              alt="neptune"
+              class="hg-planets hg-nasa"
+              onClick="reply_click('Neptune')"
+              title="Neptune"
+            />
+          </div>
+        </div>
+
+        <div class="jymobile">
+          <div class="ll-extraRow">
+            <a href="#ll-aboutUs"
+              ><ion-icon name="planet-outline"></ion-icon
+            ></a>
+            &nbsp; Which planet would you like to visit?
+          </div>
           <img
             class="jycrop1 jymercury"
             src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
@@ -80,7 +187,6 @@
             onClick="reply_click('Mercury')"
             title="Mercury"
           />
-
           <img
             class="jycrop1 jyvenus"
             src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
@@ -89,13 +195,13 @@
             onClick="reply_click('Venus')"
             title="Venus"
           />
-        </div>
-        <div class="jyprow2">
           <img
             class="jycrop1 jyearth"
             src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
             alt="earth"
-            title="Earth: we'll start from here"
+            class="hg-planets hg-nasa"
+            onClick="reply_click('Earth')"
+            title="Earth"
           />
           <img
             class="jycrop1 jymars"
@@ -105,30 +211,22 @@
             onClick="reply_click('Mars')"
             title="Mars"
           />
-        </div>
-        <div class="jyprow2">
-          <div class="jyjupiter" style="width: 390px">
-            <img
-              class="jycrop1"
-              src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
-              alt="jupiter"
-              class="hg-planets hg-nasa"
-              onClick="reply_click('Jupiter')"
-              title="Jupiter"
-            />
-          </div>
-
+          <img
+            class="jycrop1 jyjupiter"
+            src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
+            alt="jupiter"
+            class="hg-planets hg-nasa"
+            onClick="reply_click('Jupiter')"
+            title="Jupiter"
+          />
           <img
             class="jycrop2 jysaturn"
             src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
             alt="saturn"
             class="hg-planets hg-nasa"
-            title="saturn"
             onClick="reply_click('Saturn')"
             title="Saturn"
           />
-        </div>
-        <div class="jyprow1">
           <img
             class="jycrop1 jyuranus"
             src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
@@ -147,116 +245,57 @@
           />
         </div>
       </div>
-
-      <div class="jymobile">
-        <img
-          class="jycrop1 jymercury"
-          src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
-          alt="mercury"
-          class="hg-planets hg-nasa"
-          onClick="reply_click('Mercury')"
-          title="Mercury"
-        />
-        <img
-          class="jycrop1 jyvenus"
-          src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
-          alt="venus"
-          class="hg-planets hg-nasa"
-          onClick="reply_click('Venus')"
-          title="Venus"
-        />
-        <img
-          class="jycrop1 jyearth"
-          src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
-          alt="earth"
-          class="hg-planets hg-nasa"
-          onClick="reply_click('Earth')"
-          title="Earth"
-        />
-        <img
-          class="jycrop1 jymars"
-          src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
-          alt="mars"
-          class="hg-planets hg-nasa"
-          onClick="reply_click('Mars')"
-          title="Mars"
-        />
-        <img
-          class="jycrop1 jyjupiter"
-          src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
-          alt="jupiter"
-          class="hg-planets hg-nasa"
-          onClick="reply_click('Jupiter')"
-          title="Jupiter"
-        />
-        <img
-          class="jycrop2 jysaturn"
-          src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
-          alt="saturn"
-          class="hg-planets hg-nasa"
-          onClick="reply_click('Saturn')"
-          title="Saturn"
-        />
-        <img
-          class="jycrop1 jyuranus"
-          src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
-          alt="uranus"
-          class="hg-planets hg-nasa"
-          onClick="reply_click('Uranus')"
-          title="Uranus"
-        />
-        <img
-          class="jycrop1 jyneptune"
-          src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
-          alt="neptune"
-          class="hg-planets hg-nasa"
-          onClick="reply_click('Neptune')"
-          title="Neptune"
-        />
-      </div>
       <!-- POPUP -->
-      <div class="row" id="hg-popup" style="display: none"></div>
+      <div id="hg-popup" style="display: none"></div>
 
-      <div class="bran-card-section">
-        <div class="container">
-          <h1 class="text-center red"><span>Our Astronauts</span></h1>
-          <p class="text-center aboutus-p">
-            Ground Control to Major Tom, flying with our astronauts is fun and
-            safe.
-          </p>
+      <div id="ll-aboutUs">
+        <div class="row aboutUsHeading">
+          <div class="col col-md-12">
+            <p>
+              Ground Control to PlanIt, flying with our astronauts is FUN ...
+            </p>
+          </div>
         </div>
+        <div class="row">
+          <div class="col col-md-6 col-sm-12">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front" style="width: 18rem">
+                  <img
+                    src="/image/brandenpng.png"
+                    class="card-img-top"
+                    alt=""
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h2>Branden</h2>
+                  <p>
+                    Developer <br />
+                    Asterism:
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-6">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front" style="width: 18rem">
+                  <img src="/image/giaupng.png" class="card-img-top" alt="" />
+                </div>
+                <div class="flip-card-back">
+                  <h2>Giau</h2>
+                  <p>
+                    Developer <br />
+                    Asterism:
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div class="container">
           <div class="row">
-            <div class="col-md-4">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front" style="width: 18rem">
-                    <img
-                      src="/image/brandenpng.png"
-                      class="card-img-top"
-                      alt=""
-                    />
-                  </div>
-                  <div class="flip-card-back">
-                    <h1>name</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front" style="width: 18rem">
-                    <img src="/image/giaupng.png" class="card-img-top" alt="" />
-                  </div>
-                  <div class="flip-card-back">
-                    <h1>name</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
+            <div class="col col-md-12">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front" style="width: 18rem">
@@ -267,12 +306,19 @@
                     />
                   </div>
                   <div class="flip-card-back">
-                    <h1>name</h1>
+                    <h2>Huong</h2>
+                    <p>
+                      Developer <br />
+                      Asterism:
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+          </div>
+
+          <div class="row">
+            <div class="col col-md-6 col-sm-12">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front" style="width: 18rem">
@@ -283,28 +329,42 @@
                     />
                   </div>
                   <div class="flip-card-back">
-                    <h1>name</h1>
+                    <h2>Jun</h2>
+                    <p>
+                      Scrum Master <br />
+                      Asterism:
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 card-style">
+            <div class="col col-md-6 col-sm-12">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front" style="width: 18rem">
                     <img src="/image/Linhpng.png" class="card-img-top" alt="" />
                   </div>
                   <div class="flip-card-back">
-                    <h1>name</h1>
+                    <h2>Linh Le</h2>
+                    <p>
+                      Product Owner <br />
+                      Asterism: sagittarius
+                    </p>
+                    <img src="/image/sagit.png" style="width: 110px" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="row aboutUsHeading">
+            <div class="col col-md-12">
+              <p>... and SAFE <a href="#footer"><ion-icon name="happy-outline"></ion-icon></a></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <footer>
+    <footer id="footer">
       <div class="ll-footer">
         <div>
           <div class="gnfooter-icons gniconplacement">
@@ -368,10 +428,11 @@
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script src="/myscripts.js"></script>
-    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- PARTICLES JS -->
+    <script src="./particles.js"></script>
+    <script src="./app.js"></script>
 
+    <!-- MAIN JS -->
     <script src="./myscripts.js"></script>
   </body>
 </html>
