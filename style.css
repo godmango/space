@@ -4,6 +4,11 @@ html {
 
 body {
 	margin: 0px;
+	font-family: "nasalizationregular";
+	src: url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff2")
+			format("woff2"),
+		url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff")
+			format("woff");
 }
 
 a {
@@ -254,12 +259,12 @@ a:hover {
 	font-family: "nasalizationregular";
 }
 .hg-noOfPassenger {
-	/* display: flex;
+	display: flex;
 	justify-content: center;
-  align-items: center !important; */
+	align-items: center !important;
 	position: absolute;
-	top: 45%;
-	left: 30%;
+	/* top: 45%; */
+	/* left: 30%; */
 	color: #ffffff;
 }
 
@@ -403,12 +408,14 @@ nav {
 			format("woff");
 	color: white;
 	font-size: 30px;
+	text-decoration: none;
 }
 
 .gnfooter-icons {
 	flex: 3;
 	display: flex;
 	justify-content: center;
+	text-decoration: none;
 }
 
 .gnfooter-icons > .fab {
@@ -416,17 +423,19 @@ nav {
 }
 
 .gnfooter-icons > .fab:hover {
-	color: #d1d0d0;
+	color: #888888;
+	text-decoration: none;
 }
 
 .gnbtnplacement {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 	padding: 10px;
 }
 
 .gnbtn {
-	border: 0px;
 	font-size: 20px;
 	width: 252.656px;
 	height: 47.4844px;
@@ -434,6 +443,10 @@ nav {
 	transition-duration: 0.3s;
 	font-weight: bold;
 	background-color: #1d2124;
+	border: 1px solid #888888;
+	padding: 10px;
+	box-shadow: 5px 5px #888888;
+	margin-bottom: 25px;
 }
 
 .gnbtn:hover {
@@ -442,7 +455,7 @@ nav {
 }
 
 .gnbtn-primary {
-	color: #919496;
+	color: white;
 }
 
 select.number {
@@ -608,7 +621,7 @@ select.number {
 
 .ll-footer {
 	position: relative;
-	height: 300px;
+	height: 400px;
 	overflow: hidden;
 	background-color: black;
 	background-position: center;
@@ -622,4 +635,21 @@ select.number {
 
 .gncontactinfo {
 	text-align: center;
+}
+
+#demo {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.margin {
+	padding-right: 8%;
+}
+
+.gnbtn:focus {
+	outline: none;
+}
+
+.gniconcolor {
+	text-decoration: none;
 }
