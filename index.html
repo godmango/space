@@ -1,296 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Changa&family=Special+Elite&display=swap"
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
 
-			rel="stylesheet"
-		/>
-		<!-- BOOTSTRAP -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-		
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
 
-		<link rel="stylesheet" href="style.css" />
-	</head>
+  <body>
+    <nav>
+      <div class="gncontainer gnnavstyle">
+        <div class="gnlogospacing">
+          <img
+            src="https://media.giphy.com/media/VDZBuTxxd4wPoEB1C9/giphy.gif"
+            width="100px"
+          />
+          <span class="navbarfont">planIt</span>
+        </div>
+        <a href="#">Our Crew</a>
+      </div>
+    </nav>
 
-	<body>
-		<nav>
-			<div class="gncontainer gnnavstyle">
-				<div class="gnlogospacing">
-					<img src ="https://media.giphy.com/media/VDZBuTxxd4wPoEB1C9/giphy.gif" width="100px"/>
-					<span class="navbarfont">planIt</span>
-				</div>
-				<a href="#">Our Crew</a>
-			</div>
-				
-				
-			<!-- Branden / Giau (navbar) -->
-		</nav>
+    <section>
+      <!-- Ellen (mainpage) -->
+      <div class="ll-welcome">
+        <div>Are you ready <br />for your next adventure?</div>
+        <div class="ll-bankspace"></div>
+        <div class="ll-rotateRocket" id="ll-rocketButton" onclick="flyRocket">
+          <a href="#hg-noOfPassenger" class="ll-scroll">
+            <ion-icon name="rocket-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
 
-		<section>
-			<!-- Ellen (mainpage) -->
-			<div class="ll-welcome">
-				<div>Are you ready <br />for your next adventure?</div>
-				<div class="ll-bankspace"></div>
-				<div class="ll-rotateRocket" id="ll-rocketButton" onclick="flyRocket">
-					<a href="#ll-section2" class="ll-scroll">
-						<ion-icon name="rocket-outline"></ion-icon>
-					</a>
-				</div>
-			</div>
+      <!-- passenger no -->
+      <div id="hg-noOfPassenger">
+        <label class="hg-nasa mr-4 number" for="number"
+          >No. of passenger:</label
+        >
+        <select
+          class="hg-nasa number"
+          name="number"
+          id="number"
+          onchange="getNoOfPassenger()"
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <br />
 
-			<div id="ll-section2">This is section 2</div>
-			<!-- Branded + Giau (about us) -->
-       <section class="bran-card-section ">
+
+      <div class="jydesktop">
+        <div class="jyprow1">
+          <img
+            class="jycrop1 jymercury"
+            src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
+            alt="mercury"
+            class="hg-planets hg-nasa"
+            onClick="reply_click('Mercury')"
+            title="Mercury"
+          />
+
+          <img
+            class="jycrop1 jyvenus"
+            src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
+            alt="venus"
+            class="hg-planets hg-nasa"
+            onClick="reply_click('Venus')"
+            title="Venus"
+          />
+        </div>
+        <div class="jyprow2">
+          <img
+            class="jycrop1 jyearth"
+            src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
+            alt="earth"
+            title="Earth: we'll start from here"
+          />
+          <img
+            class="jycrop1 jymars"
+            src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
+            alt="mars"
+            class="hg-planets hg-nasa"
+            onClick="reply_click('Mars')"
+            title="Mars"
+          />
+        </div>
+        <div class="jyprow2">
+          <div class="jyjupiter" style="width: 390px">
+            <img
+              class="jycrop1"
+              src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
+              alt="jupiter"
+              class="hg-planets hg-nasa"
+              onClick="reply_click('Jupiter')"
+              title="Jupiter"
+            />
+          </div>
+
+
+          <img
+            class="jycrop2 jysaturn"
+            src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
+            alt="saturn"
+            class="hg-planets hg-nasa"
+            title="saturn"
+            onClick="reply_click('Saturn')"
+            title="Saturn"
+          />
+        </div>
+        <div class="jyprow1">
+          <img
+            class="jycrop1 jyuranus"
+            src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
+            alt="uranus"
+            class="hg-planets hg-nasa"
+            onClick="reply_click('Uranus')"
+            title="Uranus"
+          />
+          <img
+            class="jycrop1 jyneptune"
+            src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
+            alt="neptune"
+            class="hg-planets hg-nasa"
+            onClick="reply_click('Neptune')"
+            title="Neptune"
+          />
+        </div>
+      </div>
+
+      <div class="jymobile">
+        <img
+          class="jycrop1 jymercury"
+          src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
+          alt="mercury"
+          class="hg-planets hg-nasa"
+          onClick="reply_click('Mercury')"
+          title="Mercury"
+        />
+        <img
+          class="jycrop1 jyvenus"
+          src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
+          alt="venus"
+          class="hg-planets hg-nasa"
+          onClick="reply_click('Venus')"
+          title="Venus"
+        />
+        <img
+          class="jycrop1 jyearth"
+          src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
+          alt="earth"
+          class="hg-planets hg-nasa"
+          onClick="reply_click('Earth')"
+          title="Earth"
+        />
+        <img
+          class="jycrop1 jymars"
+          src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
+          alt="mars"
+          class="hg-planets hg-nasa"
+          onClick="reply_click('Mars')"
+          title="Mars"
+        />
+        <img
+          class="jycrop1 jyjupiter"
+          src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
+          alt="jupiter"
+          class="hg-planets hg-nasa"
+          onClick="reply_click('Jupiter')"
+          title="Jupiter"
+        />
+        <img
+          class="jycrop2 jysaturn"
+          src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
+          alt="saturn"
+          class="hg-planets hg-nasa"
+          onClick="reply_click('Saturn')"
+          title="Saturn"
+        />
+        <img
+          class="jycrop1 jyuranus"
+          src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
+          alt="uranus"
+          class="hg-planets hg-nasa"
+          onClick="reply_click('Uranus')"
+          title="Uranus"
+        />
+        <img
+          class="jycrop1 jyneptune"
+          src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
+          alt="neptune"
+          class="hg-planets hg-nasa"
+          onClick="reply_click('Neptune')"
+          title="Neptune"
+        />
+      </div>
+      <!-- POPUP -->
+      <div class="row" id="hg-popup" style="display: none"></div>
+
+      <div class="bran-card-section">
         <div class="container">
           <h1 class="text-center red"><span>Our Astronauts</span></h1>
-            <p class="text-center aboutus-p">
-                Ground Control to Major Tom, flying with our astronauts is fun and safe. 
-            </p>
-        </div>
-        
+          <p class="text-center aboutus-p">
+            Ground Control to Major Tom, flying with our astronauts is fun and
+            safe.
+          </p>
+
+
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 card-style">
-                    <div class="card box-shadow cards one">
-                        <img class="card-img-top card-image card-photo" src="https://i.imgur.com/DOBGoVn.jpg" alt="Card image cap"/>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Linh Li</h5>
-                            <p class="card-text">Owner (Developer)</p>
-                            <div class="text-center">
-                                <!--<a href="#" class="btn btn-primary red">Learn More</a>-->
-                            </div>
-                        </div>
-                    </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front" style="width: 18rem">
+                    <img
+                      src="/image/brandenpng.png"
+                      class="card-img-top"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>name</h1>
+                  </div>
                 </div>
-                <div class="col-md-4 card-style">
-                    <div class="card box-shadow cards two">
-                        <img class="card-img-top card-image card-photo" src= "https://i.pinimg.com/236x/c6/29/4f/c6294f6a3332eb4408da0c49fa7bc2bc.jpg" alt="Card image cap"/>
-                        <div class="card-body text-center">
-                            <h5 class="card-title ">Hung</h5>
-                            <p class="card-text">Flight Engineer (Developer)</p>
-                            <div class="text-center">
-                                <!--<a href="#" class="btn btn-primary red">Learn More</a>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 card-style">
-                    <div class="card box-shadow cards three ">
-                        <img class="card-img-top card-image card-photo" src="https://i.pinimg.com/originals/41/6d/b6/416db66dbf01f8be81227354a1841a2f.jpg"  alt="Card image cap" />
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Giau Nguyen</h5>
-                            <p class="card-text">Saturn- Flight Engineer (Developer)</p>
-                            <div class="text-right">
-                                <!--<a href="#" class="btn btn-primary red">Learn More</a>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>               
-                <div class="col-md-4 card-style">                   
-                    <div class="card box-shadow cards four">
-                        <img class="card-img-top card-image card-photo" src="https://i.pinimg.com/originals/41/6d/b6/416db66dbf01f8be81227354a1841a2f.jpg" alt="Card image cap" />
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Jun Young Cho</h5>
-                            <p class="card-text">Captian & Scrum </p>
-                            <div class="text-center">
-                                <!--<a href="#" class="btn btn-primary red">Learn More</a>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 card-style">
-                    <div class="card box-shadow cards five">
-                        <img class="card-img-top image-5 card-photo" src="https://i.pinimg.com/564x/0b/49/79/0b497971ec84b7b3dbbe26121bd66508.jpg" alt="Card image cap"/>                     
-                        <div class="card-body text-center aboutus-card">
-                            <h5 class="card-title">Branden</h5>
-                            <p class="card-text">Flight Engineer (Developer)</p>
-                            <div class="text-right">
-                                <!--what info do we want for the team memebers?-->
-                                <!--<a href="#" class="btn btn-primary red">Learn More</a>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="col-md-4">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front" style="width: 18rem">
+                    <img src="/image/giaupng.png" class="card-img-top" alt="" />
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>name</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front" style="width: 18rem">
+                    <img
+                      src="/image/huongpng.png"
+                      class="card-img-top"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>name</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front" style="width: 18rem">
+                    <img
+                      src="/image/junyoungpng.png"
+                      class="card-img-top"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>name</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 card-style">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front" style="width: 18rem">
+                    <img src="/image/Linhpng.png" class="card-img-top" alt="" />
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>name</h1>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-			<!-- Jun Young + Huong (solar system pop up) -->
 
-			<!-- passenger no -->
-			<div class="hg-noOfPassenger">
-				<label class="hg-nasa mr-4 number" for="number">No. of passenger:</label>
-				<select  class="hg-nasa number" name="number" id="number" onchange="getNoOfPassenger()">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-				</select>
-			</div>
-			<br>
+    <footer>
+      <div class="ll-footer">
+        <div>
+          <div class="gnfooter-icons gniconplacement">
+            <a chref="#" class="fab fa-instagram fa-2x gniconcolor"></a>
+            <a href="#" class="fab fa-facebook fa-2x gniconcolor"></a>
+            <a href="#" class="fab fa-twitter fa-2x gniconcolor"></a>
+          </div>
 
-			<div class="jydesktop">
-				<div class="jyprow1">
-					<img
-						class="jycrop1 jymercury"
-						src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
-						alt="mercury"
-						class="hg-planets hg-nasa" onClick="reply_click('Mercury')"
-					/>
-					<img
-						class="jycrop1 jyvenus"
-						src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
-						alt="venus"
-						class="hg-planets hg-nasa" onClick="reply_click('Venus')"
-					/>
-				</div>
-				<div class="jyprow2">
-					<img
-						class="jycrop1 jyearth"
-						src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
-						alt="earth"
-					/>
-					<img
-						class="jycrop1 jymars"
-						src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
-						alt="mars"
-						class="hg-planets hg-nasa" onClick="reply_click('Mars')"
-					/>
-				</div>
-				<div class="jyprow2">
-					<div class="jyjupiter" style="width: 390px">
-						<img
-							class="jycrop1"
-							src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
-							alt="jupiter"
-							class="hg-planets hg-nasa" onClick="reply_click('Jupiter')"
-						/>
-					</div>
+          <div class="gnbtnplacement">
+            <button class="gnbtn gnbtn-primary">TIME TIL LAUNCH</button>
+          </div>
 
-					<img
-						class="jycrop2 jysaturn"
-						src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
-						alt="saturn"
-						class="hg-planets hg-nasa" onClick="reply_click('Saturn')"
-					/>
-				</div>
-				<div class="jyprow1">
-					<img
-						class="jycrop1 jyuranus"
-						src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
-						alt="uranus"
-						class="hg-planets hg-nasa"  onClick="reply_click('Uranus')"
-					/>
-					<img
-						class="jycrop1 jyneptune"
-						src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
-						alt="neptune"
-						class="hg-planets hg-nasa" onClick="reply_click('Neptune')"
-					/>
-				</div>
-			</div>
 
-			<div class="jymobile">
-				<img
-					class="jycrop1 jymercury"
-					src="https://cdn.discordapp.com/attachments/748785850418200608/748795788234063952/mercurypng.png"
-					alt="mercury"
-					class="hg-planets hg-nasa" onClick="reply_click('Mercury')"
-				/>
-				<img
-					class="jycrop1 jyvenus"
-					src="https://cdn.discordapp.com/attachments/748785850418200608/748795779489202196/venuspng.png"
-					alt="venus"
-					class="hg-planets hg-nasa" onClick="reply_click('Venus')"
-				/>
-				<img
-					class="jycrop1 jyearth"
-					src="https://cdn.discordapp.com/attachments/748785850418200608/748795799227596860/earthpng.png"
-					alt="earth"
-					class="hg-planets hg-nasa" onClick="reply_click('Earth')"
-				/>
-				<img
-					class="jycrop1 jymars"
-					src="https://cdn.discordapp.com/attachments/748785850418200608/748795794210947092/marspng.png"
-					alt="mars"
-					class="hg-planets hg-nasa" onClick="reply_click('Mars')"
-				/>
-				<img
-					class="jycrop1 jyjupiter"
-					src="https://cdn.discordapp.com/attachments/748785850418200608/748796653447675954/jupiterpng.png"
-					alt="jupiter"
-					class="hg-planets hg-nasa" onClick="reply_click('Jupiter')"
-				/>
-				<img
-					class="jycrop2 jysaturn"
-					src="https://cdn.discordapp.com/attachments/748785850418200608/748795782957629570/saturnpng.png"
-					alt="saturn"
-					class="hg-planets hg-nasa" onClick="reply_click('Saturn')"
-				/>
-				<img
-					class="jycrop1 jyuranus"
-					src="https://cdn.discordapp.com/attachments/748785850418200608/748795781414125608/uranuspng.png"
-					alt="uranus"
-					class="hg-planets hg-nasa" onClick="reply_click('Uranus')"
-				/>
-				<img
-					class="jycrop1 jyneptune"
-					src="https://cdn.discordapp.com/attachments/748785850418200608/748795784215920640/neptunepng.png"
-					alt="neptune"
-					class="hg-planets hg-nasa" onClick="reply_click('Neptune')"
-				/>
-			</div>
-			<!-- POPUP -->
-			<div class="row" id="hg-popup" style="display: none;">
-        
+          <div>
+            <p class="gnaddress">
+              12 Ton Dan Street, Ward 13, District 4, Ho Chi Minh City, Vietnam
+            </p>
+            <p class="gncontactinfo">
+              <span> +84 987 863 2637 </span>
+              <span class="gncontactpadding"> | </span>
+              <span> group1@planit.com</span>
+            </p>
+          </div>
+        </div>
 
-        
-			</div>
-		</section>
-		<footer>
+        <!-- Branden / Giau (footer) -->
 
-			<div>
+        <div class="ll-box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </footer>
 
-				<div class="gnfooter-icons gniconplacement">
-					<a chref="#" class="fab fa-instagram fa-2x gniconcolor" ></a>
-					<a href="#" class="fab fa-facebook fa-2x gniconcolor"></a>
-					<a href="#" class="fab fa-twitter fa-2x gniconcolor"></a>
-				</div>
-	
-	
-				<div class="gnbtnplacement">
-				<button class="gnbtn gnbtn-primary">TIME TIL LAUNCH</button>
-				</div>
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
 
-				<div>
-					<p class="gnaddress">
-					12 Ton Dan Street, Ward 13, District 4, Ho Chi Minh City, Vietnam
-					</p>
-					<p class="gncontactinfo">
-					<span> +84 987 863 2637 </span>
-					<span class="gncontactpadding"> | </span>
-					<span> group1@planit.com</span>
-					</p>
-					
-				</div>					
-			</div>
-	
-			<!-- Branden / Giau (footer) -->
-		</footer>
-		
-		<!-- JQUERY -->
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/myscripts.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+
+		<!-- PARTICLES JS -->
+		<script src="./particles.js"></script>
+		<script src="./app.js"></script>
+
+		<!-- MAIN JS -->
 		<script src="./myscripts.js"></script>
 	</body>
 </html>

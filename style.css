@@ -1,387 +1,569 @@
-
-
-
-
-
 .bran-card-section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color:white;
+    background-color: white;
     min-height: 800 px;
     max-width: 1170 px;
     padding: 25px;
     background-image: url(https://vistapointe.net/images/stars-wallpaper-3.jpg);
-}
-
-span{
-  color: red;
-  font-weight: 500;
-}
-
-.aboutus-p{
-  font-size: 1.2em;
-  color: white;
-}
-
-.cards{
-  margin-bottom: 25px;
-  /*min-height:600px;
-  min-width:360px;*/
-}
-
-
-.card-photo {
+  
+  }
+  
+  .aboutus-p {
+    font-size: 1.2em;
+    color: white;
+  }
+  
+  
+  .cards {
+    margin-bottom: 25px;
+    /*min-height:600px;
+    min-width:360px;*/
+  }
+  
+  
+  .card-photo {
     height: 300px;
     width: 100%;
-}
-
-
-
-.card-style {
-  border-width: 20px;
-}
-
-
-
-.box-shadow {
+  }
+  
+  .card-style {
+    border-width: 0px;
+  }
+  
+  
+  .box-shadow {
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
-}
-
-
-.card-img-top:hover {
-  opacity: .5;
-}
-
-
-
-html {
-	scroll-behavior: smooth;
-}
-
-body {
-	margin: 0px;
-}
-
-@keyframes scrollBackground {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: 0px -1080px;
-	}
-}
-
-.ll-welcome {
-	width: 100%;
-	height: 100vh;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-		url("https://i.imgur.com/nbtlerW.jpg");
-	background-size: cover;
-	animation: scrollBackground 60s infinite;
-	color: white;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-	font-family: "Special Elite", cursive;
-	font-size: 60px;
-	text-align: center;
-}
-
-.ll-bankspace {
-	height: 40%;
-}
-
-.ll-scroll {
-	text-decoration: none;
-	color: white;
-	transform: rotate(315deg);
-}
-
-.ll-rotateRocket:hover {
-	transform: rotate(315deg);
-}
-
-#ll-section2 {
-	height: 300px;
-}
-
-.jycrop1 {
-	width: 130px;
-	height: auto;
-
-	border-radius: 50%;
-}
-
-.jycrop2 {
-	width: 330px;
-}
-.jyprow1 {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 50px;
-}
-
-.jyprow2 {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 50px;
-}
-.jydesktop .jymercury,
-.jydesktop .jyuranus {
-	margin-left: 26vw;
-}
-
-.jydesktop .jyearth,
-.jydesktop .jyjupiter {
-	margin-left: 10vw;
-}
-
-.jydesktop .jyvenus,
-.jydesktop .jyneptune {
-	margin-right: 26vw;
-}
-
-.jydesktop .jymars {
-	margin-right: 10vw;
-}
-
-.jydesktop .jysaturn {
-	margin-right: 8vw;
-}
-
-.jymobile {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.jymobile img {
-	margin: 30px;
-}
-
-@media only screen and (max-width: 1424px) {
-	.jydesktop {
-		display: none;
-	}
-}
-
-@media only screen and (min-width: 1425px) {
-	.jymobile {
-		display: none;
-	}
-}
-
-
-/* POPUP CSS */
-@font-face {
-    font-family: 'nasalizationregular';
-    src: url('../webfontkit-20200827-234732/nasalization-rg-webfont.woff2') format('woff2'),
-         url('../webfontkit-20200827-234732/nasalization-rg-webfont.woff') format('woff');
+  }
+  
+  .card-img-top:hover {
+    opacity: 0.5;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0px;
+  }
+  
+  @keyframes scrollPrice {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -1425px 0px;
+    }
+  }
+  @keyframes scrollBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0px -1080px;
+    }
+  }
+  
+  .ll-welcome {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("/image/intro-background.jpg");
+    background-size: cover;
+    animation: scrollBackground 60s infinite;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Special Elite", cursive;
+    font-size: 60px;
+    text-align: center;
+  }
+  
+  .ll-bankspace {
+    height: 40%;
+  }
+  
+  .ll-scroll {
+    text-decoration: none;
+    color: white;
+    transform: rotate(315deg);
+  }
+  
+  .ll-rotateRocket:hover {
+    transform: rotate(315deg);
+  }
+  
+  .ll-footer {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(/image/numberpeople.png);
+    background-position: bottom left;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ll-box div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    border-radius: 30%;
+  }
+  
+  .ll-box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+  }
+  
+  .ll-box div:nth-child(2) {
+    top: 90%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+  }
+  
+  .ll-box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+  }
+  
+  .ll-box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+  }
+  
+  .ll-box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+  }
+  
+  .ll-box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+  }
+  
+  .ll-box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+  }
+  
+  .ll-box div:nth-child(8) {
+    position: absolute;
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+  }
+  
+  .ll-box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+  }
+  
+  .ll-box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+  }
+  
+  .ll-box div:nth-child(11) {
+    top: 50%;
+    left: 1%;
+    animation: animate 5s linear infinite;
+  }
+  
+  .ll-box div:nth-child(12) {
+    top: 80%;
+    left: 90%;
+    animation: animate 5s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: scale(0) translateY(0) rotate(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) translateY(-90px) rotate(360deg);
+      opacity: 1;
+    }
+  }
+  
+  #hg-noOfPassenger {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./image/planetbackground.jpg");
+    background-size: cover;
+    background-position: top;
+    padding: 5% 0;
+  }
+  
+  
+  .jycrop1 {
+    width: 130px;
+    height: auto;
+  
+    border-radius: 50%;
+  }
+  
+  
+  .jycrop2 {
+    width: 330px;
+  }
+  .jyprow1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  
+  .jyprow2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  .jydesktop .jymercury,
+  .jydesktop .jyuranus {
+    margin-left: 26vw;
+  }
+  
+  .jydesktop .jyearth,
+  .jydesktop .jyjupiter {
+    margin-left: 10vw;
+  }
+  
+  .jydesktop .jyvenus,
+  .jydesktop .jyneptune {
+    margin-right: 26vw;
+  }
+  
+  .jydesktop .jymars {
+    margin-right: 10vw;
+  }
+  
+  .jydesktop .jysaturn {
+    margin-right: 8vw;
+  }
+  
+  .jymobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .jymobile img {
+    margin: 30px;
+  }
+  
+  @media only screen and (max-width: 1424px) {
+    .jydesktop {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 1425px) {
+    .jymobile {
+      display: none;
+    }
+  }
+  
+  /* POPUP CSS */
+  @font-face {
+    font-family: "nasalizationregular";
+    src: url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff2")
+        format("woff2"),
+      url("../webfontkit-20200827-234732/nasalization-rg-webfont.woff")
+        format("woff");
     font-weight: normal;
     font-style: normal;
-
-}
-
-.hg-nasa {
-    font-family: 'nasalizationregular';
-}
-
-.hg-noOfPassenger {
-	display: flex;
-    justify-content: center;
-}
-
-
-#hg-popup {
-    background-color: #00223e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	text-align: center;
-	overflow: hidden;
-	max-width: 100vw;
-	height: 100vh;
-    /* position: relative; */
-
-}
-
-.hg-popup-container {
-	
-	margin: 0 auto;
-	/* make picture center on smaller sizes */
-	margin-left: 50%;
-	transform: translateX(-50%);
-	position: relative;
-	width: 800px;
-	height: 700px;
+  }
+  
+  .hg-nasa {
+    font-family: "nasalizationregular";
+  }
+  
+  .hg-noOfPassenger {
+  <
+      display: flex;
+      justify-content: center;
+      align-items: center !important;
+      position: absolute;
+      top: 40%;
+      left: 25%;
+      color: #ffffff;
+  
+  }
+  
+  #hg-popup {
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      max-width: 100vw;
+      height: 100vh;
+      color: #ffffff;
+  }
+  
+  .hg-popup-container {
+      
+      margin: 0 auto;
+      /* make picture center on smaller sizes */
+      margin-left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+      width: 800px;
+      height: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .hg-popup-img {
+      position: absolute;
+      overflow: hidden;
+      /* width: 100vw; */
+      /* height: 800px; */
+      
+  }
+  
+  .hg-popup-content {
+      width: 270px;
+      height: 350px;
+      padding: 0 270px !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'nasalizationregular';
+      top: 15%;
+  }
+  
+  #number {
+      width: 55px;
+      border: none;
+      align-self: center;
+      margin-bottom: 15px;
+      margin-right: 10px;
+  
+  }
+  
+  #number:focus {
+    outline: none;
+  }
+  
+  .number {
+    font-size: 50px;
+    letter-spacing: 1.5px;
+  }
+  
+  
+  
+  .gnnavcontainer {
+      width: 100%;
+      }
+      
+      .gncontainer {
+          max-width: 1170px;
+          width: 100%;
+          }
+      
+      nav {
+      height: 80px;
+      background-image: linear-gradient(to right, black , transparent);
+      display: flex;
+      justify-content: center;
+      }
+  
+      .gnlogospacing {
+          display: flex;
+          justify-content: flex-start;
+      }
+  
+      .navbarfont {
+          color: white;
+          padding-top: 14%;
+      }
+      
+  .gnnavstyle{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      }
+      
+      .gnnavstyle a{
+      color: black;
+      margin-right: 15px;
+      text-decoration: none;
+      padding-right: 10px;
+      padding-left: 10px;
+      }
+      
+      .gnnavstyle:hover{
+      text-decoration: none;
+      }
+      
+      .gnfooter-icons {
+          flex: 3;
+          display: flex;
+          justify-content: center;
+          }
+          
+      .gnfooter-icons > .fab {
+          margin: 15px;
+          }
+          
+      .gnfooter-icons > .fab:hover {
+          color: #d1d0d0;
+          }
+  
+      .gnbtnplacement {
+              display: flex;
+              justify-content: center;
+              padding: 10px;
+              }
+              
+      .gnbtn {
+              border: 0px;
+              font-size: 20px;
+              width: 252.656px;
+              height: 47.4844px;
+              border-radius: 500px;
+              transition-duration: 0.3s;
+              font-weight: bold;
+              background-color: #1d2124;
+              }
+  
+  
+      .gnbtn:hover{
+          background-color: black;
+          cursor: pointer;
+      }
+  
+      .gnbtn-primary {
+          color: #919496;
+      }
+  
+  select.number {
+      border-radius: 200px;
+      -webkit-border-radius: 200px;
+      -moz-border-radius: 200px;
+      -ms-border-radius: 200px;
+      -o-border-radius: 200px;
+  }
+  
+  .number option {
+      background-color: gray !important;
+      padding: 0 auto;
+      
+  }
+  
+  
+  /* PARTICLES */
+  #particles-js {
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     
-    /* background-image: url("../img/image.jpg"); */
-    /* background-image: url("https://us.123rf.com/450wm/jemastock/jemastock1803/jemastock180302350/96766477-astronaut-helmet-over-black-background-vector-clothing-design.jpg?ver=6"); */
-    /* background-size: cover; */
-    /* background-size: contain;
-    background-repeat: no-repeat; */
-
-    display: flex;
-    justify-content: center;
-	align-items: center;
-	overflow: hidden;
-
-}
-
-.hg-popup-img {
-	position: absolute;
-	/* margin-bottom: -560px; */
-	overflow: hidden;
-	height: 800px;
-	
-}
-
-.hg-popup-content {
-    width: 270px;
-	height: 350px;
-    padding: 0 270px !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'nasalizationregular';
-    top: 20%;
-}
-
-#number {
-	width: 70px;
-	border: none;
-	align-self: center;
-	margin-bottom: 15px;
-	margin-right: 10px;
-}
-
-#number:focus {
-	outline: none;
-}
-
-.number {
-	font-size: 50px;
-	letter-spacing: 1.5px;
-}
-
-.gncontainer {
-	max-width: 1170px;
-	width: 100%;
-	}
-	
-	nav {
-	height: 80px;
-	background:black;
-	display: flex;
-	justify-content: center;
-	}
-
-	.gnlogospacing {
-		display: flex;
-		justify-content: flex-start;
-	}
-
-	.navbarfont {
-		color: white;
-		padding-top: 18%
-	}
-	
-.gnnavstyle{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	text-decoration: none;
-	}
-	
-	.gnnavstyle a{
-	color: white;
-	margin-right: 15px;
-	text-decoration: none;
-	padding-right: 10px;
-	padding-left: 10px;
-	}
-	
-	.gnnavstyle:hover{
-	text-decoration: none;
-	}
-	
-	.gnfooter-icons {
-		flex: 3;
-		display: flex;
-		justify-content: center;
-		}
-		
-	.gnfooter-icons > .fab {
-		margin: 15px;
-		}
-		
-	.gnfooter-icons > .fab:hover {
-		color: #d1d0d0;
-		}
-
-	.gnbtnplacement {
-			display: flex;
-			justify-content: center;
-			padding: 10px;
-			}
-			
-	.gnbtn {
-			border: 0px;
-			font-size: 20px;
-			width: 252.656px;
-			height: 47.4844px;
-			border-radius: 500px;
-			transition-duration: 0.3s;
-			font-weight: bold;
-			background-color: #1d2124;
-			}
-
-
-	.gnbtn:hover{
-		background-color: black;
-		cursor: pointer;
-	}
-
-	.gnbtn-primary {
-		color: #919496;
-	}
-
-	.gniconcolor {
-				color:#919496;
-				text-decoration: none;
-				}
-				
-	.gniconplacement {
-				display:flex;
-				justify-content:center;
-				flex: 1;
-				}
-				
-	.gncontactpadding{
-					padding-left: 5px;
-					padding-right: 5px;
-					}
-					
-	.gncontactinfo{
-					text-align:center;
-					color: #919496;
-					}
-
-	.gnaddress{
-			display:flex;
-			justify-content: center;
-			color: #919496;
-			}
-
-footer {
-	width: 100%;
-	background-color: black;
-}
-						
-					
-	
-			
-		
-	
+    /* ---- stats.js ---- */
+    
+    .count-particles{
+      background: #000022;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 80px;
+      color: #13E8E9;
+      font-size: .8em;
+      text-align: left;
+      text-indent: 4px;
+      line-height: 14px;
+      padding-bottom: 2px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: bold;
+    }
+    
+    .js-count-particles{
+      font-size: 1.1em;
+    }
+    
+    #stats,
+    .count-particles{
+      -webkit-user-select: none;
+    }
+    
+    #stats{
+      border-radius: 3px 3px 0 0;
+      overflow: hidden;
+    }
+    
+    .count-particles{
+      border-radius: 0 0 3px 3px;
+    }
+  
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 18rem;
+    /*   perspective: 1000px; /* Remove this if you don't want the 3D effect */ 
+    }
+    
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+    
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+    
+    
+    /* Style the back side */
+    .flip-card-back {
+      color: white;
+      transform: rotateY(180deg);
+      background-image: url(https://image.freepik.com/free-vector/classic-astronaut-character-with-flat-design_23-2147911112.jpg);
+      background-size: fill;
+    }
+  
+  
+    
+  
