@@ -539,8 +539,21 @@ select.number {
 	align-items: center;
 	background-image: url(/image/footerbackground.png);
 	animation: scrollPrice 50s infinite;
-	padding: 2% 0;
+
 	background-size: cover;
+}
+.col-12 {
+	display: flex;
+	justify-content: center;
+}
+.col-md-6 {
+	display: flex;
+	justify-content: center;
+}
+
+.card-img-top {
+	width: 190px;
+	height: 190px;
 }
 
 .row {
@@ -588,6 +601,7 @@ select.number {
 	-webkit-backface-visibility: hidden; /* Safari */
 	backface-visibility: hidden;
 	color: white;
+	text-align: left;
 }
 
 /* Style the back side */
@@ -600,6 +614,8 @@ select.number {
 	border-radius: 50%;
 	border-color: white;
 	display: flex;
+	width: 190px;
+	height: 190px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -641,10 +657,6 @@ select.number {
 #demo {
 	font-size: 50px;
 	font-weight: bold;
-}
-
-.margin {
-	padding-right: 8%;
 }
 
 .gnbtn:focus {
